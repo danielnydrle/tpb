@@ -20,7 +20,7 @@ TASKS = []
 PROCESSED_ARTICLES = []
 
 # Number of articles needed for saving to file
-SAVE_THRESHOLD = 100
+SAVE_THRESHOLD = 10
 
 def test_connection():
     """Test connection to MongoDB."""
@@ -51,7 +51,7 @@ def save_to_file(data: list, filename: str):
             f.seek(f.tell() - 2, 0) # go to last character (\n]) before EOF
             f.truncate() # remove last character (\n])
             f.write(",") # add comma for concat
-            f.write(json.dumps(data, indent=2)[1:]) # write data without first character ([)
+            f.write(json.dumps(data, indent=2, ensure_ascii=False)[1:]) # write data without first character ([)
         else:
             json.dump(data, f, indent=2) # write data
 
@@ -68,8 +68,8 @@ def multithread_scrape():
             
             for future in as_completed(TASKS):
                 try:
-                    json_article, new_articles = future.result()
-                    PROCESSED_ARTICLES.append(json.loads(json_article))
+                    [json_article, new_articles] = future.result()
+                    PROCESSED_ARTICLES.append(json.loads(json_article, ))
                     ARTICLE_LIST.extend(new_articles)
                 except Exception as e:
                     print(f"Error in task: {e}")
