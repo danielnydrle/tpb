@@ -7,20 +7,20 @@ import json
 import sys
 from pymongo.errors import ConnectionFailure
 from db_handler import MONGO_CLIENT
-from scraper_handler import get_article_urls, get_page, get_articles_from_homepage, process_article
+from scraper_handler import get_articles_from_homepage, process_article
 
 sys.dont_write_bytecode = True
 
 ARTICLE_LIST = []
 
 # Number of thread pool threads
-THREADS = 5
+THREADS = 20
 
 TASKS = []
 PROCESSED_ARTICLES = []
 
 # Number of articles needed for saving to file
-SAVE_THRESHOLD = 10
+SAVE_THRESHOLD = 100
 
 def test_connection():
     """Test connection to MongoDB."""
@@ -33,15 +33,6 @@ def test_connection():
 
 def save_to_file(data: list, filename: str):
     """Save data to file."""
-    # old_data = []
-    # with open(filename, "r+", encoding="utf-8") as f:
-    #     old_data = json.load(f) if f.read() else []
-    # old_data.extend(data)
-    # with open(filename, "w+", encoding="utf-8") as f:
-    #     f.seek(0)
-    #     json.dump(old_data, f, indent=2)
-    #     f.truncate()
-    #     PROCESSED_ARTICLES.clear()
 
     # memory optimalisation with manual file writing
     with open(filename, "a+", encoding="utf-8") as f:
@@ -69,7 +60,7 @@ def multithread_scrape():
             for future in as_completed(TASKS):
                 try:
                     [json_article, new_articles] = future.result()
-                    PROCESSED_ARTICLES.append(json.loads(json_article, ))
+                    PROCESSED_ARTICLES.append(json.loads(json_article))
                     ARTICLE_LIST.extend(new_articles)
                 except Exception as e:
                     print(f"Error in task: {e}")
