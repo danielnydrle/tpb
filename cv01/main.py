@@ -5,9 +5,8 @@ CV01 - web scraper
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import json
 import sys
-from pymongo.errors import ConnectionFailure
-from db_handler import MONGO_CLIENT
-from scraper_handler import get_articles_from_archive, get_articles_from_homepage, process_article
+from scraper_handler import get_articles_from_archive, process_article
+from os import stat
 
 sys.dont_write_bytecode = True
 
@@ -19,26 +18,16 @@ THREADS = 20
 TASKS = []
 PROCESSED_ARTICLES = []
 FINISHED_ARTICLES_URLS = set()
+FINISHED_ARTICLES_TITLES = set()
 
-ARCHIVE_COUNTER = 1
-
-# Number of articles needed for saving to file
-SAVE_THRESHOLD = 100
-
-def test_connection():
-    """Test connection to MongoDB."""
-    try:
-        MONGO_CLIENT.admin.command("ismaster")
-    except ConnectionFailure:
-        print("MongoDB connection error.")
-        sys.exit(1)
+ARCHIVE_COUNTER = 900
 
 
 def save_to_file(data: list, filename: str):
     """Save data to file."""
 
     # memory optimalisation with manual file writing
-    with open(filename, "a+", encoding="utf-8") as f:
+    with open(filename, "a+", encoding="utf8") as f:
         f.seek(0) # go to the beginning
         if f.read():
             f.seek(0, 2) # go to EOF
@@ -48,8 +37,6 @@ def save_to_file(data: list, filename: str):
             f.write(json.dumps(data, indent=2, ensure_ascii=False)[1:]) # write data without first character ([)
         else:
             json.dump(data, f, indent=2) # write data
-
-        PROCESSED_ARTICLES.clear()
 
 def multithread_scrape():
     """Run multithreaded scraper."""
@@ -81,14 +68,49 @@ def multithread_scrape():
 
 def load_previous_finished_files():
     """Load previously finished files."""
-    with open("cv01/articles.json", "r", encoding="utf-8") as f:
+    with open("cv01/articles.json", "r", encoding="utf8") as f:
         data = json.load(f)
         for article in data:
             FINISHED_ARTICLES_URLS.add(article["url"])
+            FINISHED_ARTICLES_TITLES.add(article["title"])
+    with open("cv01/archive_counter.txt", "r", encoding="utf8") as f:
+        global ARCHIVE_COUNTER
+        ARCHIVE_COUNTER = int(f.read())
+
+def singlethread_scrape():
+    """Run singlethreaded scraper."""
+    global ARCHIVE_COUNTER
+    while True:
+        while len(ARTICLE_LIST) > 10:
+            url = ARTICLE_LIST.pop(0)
+            if url not in FINISHED_ARTICLES_URLS:
+                json_article = process_article(url)
+                json_article = json.loads(json_article)
+                if json_article["title"] not in FINISHED_ARTICLES_TITLES:
+                    FINISHED_ARTICLES_URLS.add(url)
+                    FINISHED_ARTICLES_TITLES.add(json_article["title"])
+                    save_to_file([json_article], "cv01/articles.json")
+        ARTICLE_LIST.extend(get_articles_from_archive(ARCHIVE_COUNTER))
+        ARCHIVE_COUNTER += 1
+        with open("cv01/archive_counter.txt", "w", encoding="utf8") as f:
+            f.write(str(ARCHIVE_COUNTER))
+            print(f"{ARCHIVE_COUNTER} | {stat("cv01/articles.json").st_size / (1024*1024)} MB")
+
+def remove_redundancies():
+    """Remove redundant articles from the file."""
+    with open("cv01/articles.json", "r", encoding="utf8") as f:
+        data = json.load(f)
+        new_data = []
+        for article in data:
+            if article["title"] not in FINISHED_ARTICLES_TITLES and article["url"] not in FINISHED_ARTICLES_URLS:
+                new_data.append(article)
+                FINISHED_ARTICLES_TITLES.add(article["title"])
+                FINISHED_ARTICLES_URLS.add(article["url"])
+        with open("cv01/articles.json", "w", encoding="utf8") as f:
+            json.dump(new_data, f, indent=2, ensure_ascii=False)
 
 if __name__ == "__main__":
     # test_connection()
+    remove_redundancies()
     load_previous_finished_files()
-    init_articles = get_articles_from_homepage()
-    ARTICLE_LIST.extend(init_articles)
-    multithread_scrape()
+    singlethread_scrape()

@@ -76,9 +76,9 @@ def process_article(url):
         article_data = get_article_data(url, html)
         json_article_data = json.dumps(article_data, indent=2, ensure_ascii=False)
 
-        articles = get_article_urls(html)
-        hrefs = [(article.attr("href") if "/_servix/" not in article.attr("href") else article.attr("href").split("url=")[1].split("%3fzdroj")[0]) for article in articles]
-        return [json_article_data, hrefs]
+        # articles = get_article_urls(html)
+        # hrefs = [(article.attr("href") if "/_servix/" not in article.attr("href") else article.attr("href").split("url=")[1].split("%3fzdroj")[0]) for article in articles]
+        return json_article_data
     except Exception as e:
         print(f"Error processing article {url}: {e}")
-        return []
+        return None
