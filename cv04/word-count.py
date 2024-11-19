@@ -36,15 +36,8 @@ print("#" * 50)
 df = spark.read.option("multiline", "true").json("/files/articles.json")
 df.printSchema()
 
-words = df.rdd.flatMap(lambda x: x['text'].split())
-wordCounts = words.countByValue()
-sortedCounts = sorted(
-    [(pseudo_nltk(word), count)
-     for word, count in wordCounts.items()
-     if pseudo_nltk(word) and len(pseudo_nltk(word)) >= 6],
-    key=lambda x: x[1],
-    reverse=True
-)
+words = df.rdd.flatMap(lambda x: x['text'].split()).filter(lambda x: len(x) >= 6)
+wordCounts = words.sortBy(lambda x: x).countByValue()
 
 for word, count in sortedCounts[:20]:
     print(f"{word}: {count}")
