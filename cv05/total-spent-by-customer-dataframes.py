@@ -1,7 +1,7 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import round
 
-spark = SparkSession.builder.master("spark://dce528d8129c:7077").appName("SparkSQL").getOrCreate()
+spark = SparkSession.builder.master("spark://a76fb3e6550e:7077").appName("TotalSpentByCustomerDFs").getOrCreate()
 
 # inferSchema slouzi k aut. zjisteni dat. typu
 orders = spark.read.option("inferSchema", "true").csv("/files/cv05/customer-orders.csv")

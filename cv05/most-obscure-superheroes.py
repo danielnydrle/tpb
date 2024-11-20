@@ -1,7 +1,7 @@
 from pyspark import SparkConf, SparkContext
 from pyspark.sql import SparkSession
 
-spark = SparkSession.builder.master("spark://dce528d8129c:7077").appName("SparkSQL").getOrCreate()
+spark = SparkSession.builder.master("spark://a76fb3e6550e:7077").appName("MostObscureSuperheroes").getOrCreate()
 
 sc = spark.sparkContext
 
