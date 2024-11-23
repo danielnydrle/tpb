@@ -1,2 +1,4 @@
 *.pyc
 articles.json
+
+cv06/*.csv
