@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import explode, split, lower, col, current_timestamp, window
+from pyspark.sql.functions import explode, split, lower, col, current_timestamp, window, regexp_replace
 
 spark = SparkSession.builder.master("spark://a76fb3e6550e:7077").appName("StructuredStreaming").getOrCreate()
 
@@ -20,7 +20,14 @@ lines_with_timestamp = lines.withColumn("timestamp", current_timestamp())
 words = lines_with_timestamp \
     .select(
         explode(
-            split(lower(col("value")), "\\s+")
+            split(
+                regexp_replace(
+                    lower(col("value")), 
+                    "[^a-záčďéěíňóřšťúůýž0-9\\s]", 
+                    " "
+                ),
+                "\\s+"
+            )
         ).alias("word"),
         col("timestamp")
     ) \
