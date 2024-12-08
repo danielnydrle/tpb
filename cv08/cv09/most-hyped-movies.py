@@ -48,9 +48,9 @@ table_env.create_temporary_table("movies", movies_descriptor)
 movies = table_env.from_path("movies")
 
 grouped = ratings.group_by(ratings.movieID, ratings.rating).select(ratings.movieID, ratings.rating, ratings.rating.count.alias("count_o"))
-sorted = grouped.order_by("count_o.desc").fetch(10)
-joined = sorted.join(movies) \
-    .where(sorted.movieID == movies.id) \
-    .select(sorted.movieID, movies.name, sorted.count_o) \
-    .order_by(sorted.count_o.desc)
+joined = grouped.join(movies) \
+    .where(grouped.movieID == movies.id) \
+    .where(grouped.rating == 5) \
+    .select(grouped.movieID, movies.name, grouped.count_o) \
+    .order_by(grouped.count_o.desc)
 joined.execute().print()
