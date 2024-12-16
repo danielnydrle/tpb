@@ -4,7 +4,7 @@ MATCH (n) RETURN n LIMIT 10;
 # 2: 10 libovolnych filmu
 MATCH (n:Movie) RETURN n LIMIT 10;
 
-# 3: herci, kteri hrali ve filmu TheMatrix, serazeni podle jmena
+# 3: herci, kteri hrali ve filmu The Matrix, serazeni podle jmena
 MATCH (n:Person)-[:ACTED_IN]->(:Movie {title: 'The Matrix'}) RETURN n.name ORDER BY n.name;
 
 # 4: filmy, ve kterych hral Keanu Reeves
@@ -19,11 +19,8 @@ MATCH (n:Movie)<-[:ACTED_IN]-(p:Person {name: 'Keanu Reeves'}), (n)<-[:ACTED_IN]
 # 7: pridani noveho filmu "John Wick", ve kterem hraje Keanu Reeves
 CREATE (m:Movie {title: 'John Wick'})<-[:ACTED_IN]-(p:Person {name: 'Keanu Reeves'});
 
-# zobraz film John Wick
-MATCH (n:Movie {title: 'John Wick'}) RETURN n;
-
 # 8: uprava herce Keanu Reeves, pridani libovolne vlastnosti
-MATCH (p:Person {name: 'Keanu Reeves'}) SET p.birth_year = '1964';
+MATCH (p:Person {name: 'Keanu Reeves'}) SET p.hobby = 'ballroom dancing';
 
 # bonus 1: prumerny vydelek hercu
 MATCH (p:Person)-[r:ACTED_IN]->(m:Movie) RETURN AVG(r.earnings);
