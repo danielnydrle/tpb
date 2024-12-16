@@ -1,0 +1,1036 @@
+Attaching to taskmanager-1, jobmanager, kafka, zookeeper
+zookeeper      | ===> User
+zookeeper      | uid=1000(appuser) gid=1000(appuser) groups=1000(appuser)
+zookeeper      | ===> Configuring ...
+kafka          | ===> User
+kafka          | uid=1001(kafkauser) gid=1001(kafkauser) groups=1001(kafkauser)
+kafka          | ===> Configuring ...
+kafka          | Running in Zookeeper mode...
+jobmanager     | Starting Job Manager
+zookeeper      | ===> Running preflight checks ... 
+zookeeper      | ===> Check if /var/lib/zookeeper/data is writable ...
+taskmanager-1  | Starting Task Manager
+zookeeper      | ===> Check if /var/lib/zookeeper/log is writable ...
+kafka          | ===> Running preflight checks ... 
+kafka          | ===> Check if /var/lib/kafka/data is writable ...
+zookeeper      | ===> Launching ... 
+zookeeper      | ===> Launching zookeeper ... 
+kafka          | ===> Check if Zookeeper is healthy ...
+zookeeper      | [2024-12-15 18:22:01,132] INFO Reading configuration from: /etc/kafka/zookeeper.properties (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+zookeeper      | [2024-12-15 18:22:01,147] INFO clientPortAddress is 0.0.0.0:2181 (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+zookeeper      | [2024-12-15 18:22:01,147] INFO secureClientPort is not set (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+zookeeper      | [2024-12-15 18:22:01,147] INFO observerMasterPort is not set (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+zookeeper      | [2024-12-15 18:22:01,147] INFO metricsProvider.className is org.apache.zookeeper.metrics.impl.DefaultMetricsProvider (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+zookeeper      | [2024-12-15 18:22:01,152] INFO autopurge.snapRetainCount set to 3 (org.apache.zookeeper.server.DatadirCleanupManager)
+zookeeper      | [2024-12-15 18:22:01,153] INFO autopurge.purgeInterval set to 0 (org.apache.zookeeper.server.DatadirCleanupManager)
+zookeeper      | [2024-12-15 18:22:01,153] INFO Purge task is not scheduled. (org.apache.zookeeper.server.DatadirCleanupManager)
+zookeeper      | [2024-12-15 18:22:01,153] WARN Either no config or no quorum defined in config, running in standalone mode (org.apache.zookeeper.server.quorum.QuorumPeerMain)
+zookeeper      | [2024-12-15 18:22:01,155] INFO Log4j 1.2 jmx support not found; jmx disabled. (org.apache.zookeeper.jmx.ManagedUtil)
+zookeeper      | [2024-12-15 18:22:01,156] INFO Reading configuration from: /etc/kafka/zookeeper.properties (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+zookeeper      | [2024-12-15 18:22:01,157] INFO clientPortAddress is 0.0.0.0:2181 (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+zookeeper      | [2024-12-15 18:22:01,157] INFO secureClientPort is not set (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+zookeeper      | [2024-12-15 18:22:01,157] INFO observerMasterPort is not set (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+zookeeper      | [2024-12-15 18:22:01,157] INFO metricsProvider.className is org.apache.zookeeper.metrics.impl.DefaultMetricsProvider (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+zookeeper      | [2024-12-15 18:22:01,158] INFO Starting server (org.apache.zookeeper.server.ZooKeeperServerMain)
+zookeeper      | [2024-12-15 18:22:01,179] INFO ServerMetrics initialized with provider org.apache.zookeeper.metrics.impl.DefaultMetricsProvider@7e9131d5 (org.apache.zookeeper.server.ServerMetrics)
+zookeeper      | [2024-12-15 18:22:01,187] INFO zookeeper.snapshot.trust.empty : false (org.apache.zookeeper.server.persistence.FileTxnSnapLog)
+zookeeper      | [2024-12-15 18:22:01,210] INFO  (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,210] INFO   ______                  _                                           (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,210] INFO  |___  /                 | |                                          (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,211] INFO     / /    ___     ___   | | __   ___    ___   _ __     ___   _ __    (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,211] INFO    / /    / _ \   / _ \  | |/ /  / _ \  / _ \ | '_ \   / _ \ | '__| (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,211] INFO   / /__  | (_) | | (_) | |   <  |  __/ |  __/ | |_) | |  __/ | |     (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,211] INFO  /_____|  \___/   \___/  |_|\_\  \___|  \___| | .__/   \___| |_| (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,211] INFO                                               | |                      (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,211] INFO                                               |_|                      (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,211] INFO  (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,212] INFO Server environment:zookeeper.version=3.6.4--d65253dcf68e9097c6e95a126463fd5fdeb4521c, built on 12/18/2022 18:10 GMT (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,213] INFO Server environment:host.name=6307c8b3002b (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,213] INFO Server environment:java.version=11.0.20 (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,213] INFO Server environment:java.vendor=Azul Systems, Inc. (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,213] INFO Server environment:java.home=/usr/lib/jvm/java-11-zulu-openjdk-ca (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,213] INFO Server environment:java.class.path=/usr/bin/../share/java/kafka/jersey-client-2.39.1.jar:/usr/bin/../share/java/kafka/jersey-common-2.39.1.jar:/usr/bin/../share/java/kafka/kafka-metadata-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/jakarta.validation-api-2.0.2.jar:/usr/bin/../share/java/kafka/jakarta.ws.rs-api-2.1.6.jar:/usr/bin/../share/java/kafka/kafka.jar:/usr/bin/../share/java/kafka/jackson-datatype-jdk8-2.13.5.jar:/usr/bin/../share/java/kafka/netty-common-4.1.96.Final.jar:/usr/bin/../share/java/kafka/netty-transport-classes-epoll-4.1.96.Final.jar:/usr/bin/../share/java/kafka/hk2-utils-2.6.1.jar:/usr/bin/../share/java/kafka/netty-buffer-4.1.96.Final.jar:/usr/bin/../share/java/kafka/kafka-raft-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/jaxb-api-2.3.1.jar:/usr/bin/../share/java/kafka/hk2-api-2.6.1.jar:/usr/bin/../share/java/kafka/javax.ws.rs-api-2.1.1.jar:/usr/bin/../share/java/kafka/audience-annotations-0.13.0.jar:/usr/bin/../share/java/kafka/jersey-container-servlet-2.39.1.jar:/usr/bin/../share/java/kafka/reflections-0.9.12.jar:/usr/bin/../share/java/kafka/slf4j-api-1.7.36.jar:/usr/bin/../share/java/kafka/javax.servlet-api-3.1.0.jar:/usr/bin/../share/java/kafka/zstd-jni-1.5.5-1.jar:/usr/bin/../share/java/kafka/jackson-jaxrs-base-2.13.5.jar:/usr/bin/../share/java/kafka/zookeeper-3.6.4.jar:/usr/bin/../share/java/kafka/activation-1.1.1.jar:/usr/bin/../share/java/kafka/reload4j-1.2.25.jar:/usr/bin/../share/java/kafka/jakarta.annotation-api-1.3.5.jar:/usr/bin/../share/java/kafka/jose4j-0.9.3.jar:/usr/bin/../share/java/kafka/kafka-tools-api-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/jetty-continuation-9.4.51.v20230217.jar:/usr/bin/../share/java/kafka/paranamer-2.8.jar:/usr/bin/../share/java/kafka/kafka-streams-examples-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/lz4-java-1.8.0.jar:/usr/bin/../share/java/kafka/slf4j-reload4j-1.7.36.jar:/usr/bin/../share/java/kafka/scala-library-2.13.10.jar:/usr/bin/../share/java/kafka/jakarta.xml.bind-api-2.3.3.jar:/usr/bin/../share/java/kafka/jetty-server-9.4.51.v20230217.jar:/usr/bin/../share/java/kafka/plexus-utils-3.3.0.jar:/usr/bin/../share/java/kafka/metrics-core-4.1.12.1.jar:/usr/bin/../share/java/kafka/snappy-java-1.1.10.0.jar:/usr/bin/../share/java/kafka/connect-runtime-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/kafka-server-common-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/kafka-storage-api-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/connect-mirror-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/netty-transport-native-epoll-4.1.96.Final.jar:/usr/bin/../share/java/kafka/kafka-tools-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/trogdor-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/jakarta.activation-api-1.2.2.jar:/usr/bin/../share/java/kafka/kafka-clients-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/kafka_2.13-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/jopt-simple-5.0.4.jar:/usr/bin/../share/java/kafka/kafka-streams-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/netty-transport-native-unix-common-4.1.96.Final.jar:/usr/bin/../share/java/kafka/connect-basic-auth-extension-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/netty-transport-4.1.96.Final.jar:/usr/bin/../share/java/kafka/netty-resolver-4.1.96.Final.jar:/usr/bin/../share/java/kafka/jetty-servlets-9.4.51.v20230217.jar:/usr/bin/../share/java/kafka/kafka-log4j-appender-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/rocksdbjni-7.1.2.jar:/usr/bin/../share/java/kafka/jetty-io-9.4.51.v20230217.jar:/usr/bin/../share/java/kafka/zookeeper-jute-3.6.4.jar:/usr/bin/../share/java/kafka/javax.annotation-api-1.3.2.jar:/usr/bin/../share/java/kafka/jackson-module-jaxb-annotations-2.13.5.jar:/usr/bin/../share/java/kafka/argparse4j-0.7.0.jar:/usr/bin/../share/java/kafka/jetty-security-9.4.51.v20230217.jar:/usr/bin/../share/java/kafka/kafka-streams-test-utils-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/commons-lang3-3.8.1.jar:/usr/bin/../share/java/kafka/kafka-group-coordinator-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/kafka-storage-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/maven-artifact-3.8.4.jar:/usr/bin/../share/java/kafka/jetty-http-9.4.51.v20230217.jar:/usr/bin/../share/java/kafka/jersey-hk2-2.39.1.jar:/usr/bin/../share/java/kafka/jackson-annotations-2.13.5.jar:/usr/bin/../share/java/kafka/jackson-core-2.13.5.jar:/usr/bin/../share/java/kafka/osgi-resource-locator-1.0.3.jar:/usr/bin/../share/java/kafka/connect-json-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/jetty-servlet-9.4.51.v20230217.jar:/usr/bin/../share/java/kafka/jetty-util-9.4.51.v20230217.jar:/usr/bin/../share/java/kafka/connect-api-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/javassist-3.29.2-GA.jar:/usr/bin/../share/java/kafka/javax.activation-api-1.2.0.jar:/usr/bin/../share/java/kafka/jackson-databind-2.13.5.jar:/usr/bin/../share/java/kafka/connect-transforms-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/scala-logging_2.13-3.9.4.jar:/usr/bin/../share/java/kafka/commons-cli-1.4.jar:/usr/bin/../share/java/kafka/jetty-client-9.4.51.v20230217.jar:/usr/bin/../share/java/kafka/jakarta.inject-2.6.1.jar:/usr/bin/../share/java/kafka/jersey-server-2.39.1.jar:/usr/bin/../share/java/kafka/connect-mirror-client-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/swagger-annotations-2.2.8.jar:/usr/bin/../share/java/kafka/metrics-core-2.2.0.jar:/usr/bin/../share/java/kafka/netty-codec-4.1.96.Final.jar:/usr/bin/../share/java/kafka/scala-reflect-2.13.10.jar:/usr/bin/../share/java/kafka/jackson-jaxrs-json-provider-2.13.5.jar:/usr/bin/../share/java/kafka/jetty-util-ajax-9.4.51.v20230217.jar:/usr/bin/../share/java/kafka/jersey-container-servlet-core-2.39.1.jar:/usr/bin/../share/java/kafka/kafka-streams-scala_2.13-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/jline-3.22.0.jar:/usr/bin/../share/java/kafka/netty-handler-4.1.96.Final.jar:/usr/bin/../share/java/kafka/jackson-dataformat-csv-2.13.5.jar:/usr/bin/../share/java/kafka/hk2-locator-2.6.1.jar:/usr/bin/../share/java/kafka/kafka-shell-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/scala-collection-compat_2.13-2.10.0.jar:/usr/bin/../share/java/kafka/jackson-module-scala_2.13-2.13.5.jar:/usr/bin/../share/java/kafka/aopalliance-repackaged-2.6.1.jar:/usr/bin/../share/java/kafka/scala-java8-compat_2.13-1.0.2.jar:/usr/bin/../share/java/confluent-telemetry/* (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,213] INFO Server environment:java.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,213] INFO Server environment:java.io.tmpdir=/tmp (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,213] INFO Server environment:java.compiler=<NA> (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,213] INFO Server environment:os.name=Linux (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,213] INFO Server environment:os.arch=amd64 (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,213] INFO Server environment:os.version=5.15.133.1-microsoft-standard-WSL2 (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,213] INFO Server environment:user.name=appuser (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,213] INFO Server environment:user.home=/home/appuser (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,213] INFO Server environment:user.dir=/home/appuser (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,213] INFO Server environment:os.memory.free=493MB (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,213] INFO Server environment:os.memory.max=512MB (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,213] INFO Server environment:os.memory.total=512MB (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,213] INFO zookeeper.enableEagerACLCheck = false (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,214] INFO zookeeper.digest.enabled = true (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,214] INFO zookeeper.closeSessionTxn.enabled = true (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,214] INFO zookeeper.flushDelay=0 (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,214] INFO zookeeper.maxWriteQueuePollTime=0 (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,214] INFO zookeeper.maxBatchSize=1000 (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,214] INFO zookeeper.intBufferStartingSizeBytes = 1024 (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,216] INFO Weighed connection throttling is disabled (org.apache.zookeeper.server.BlueThrottle)
+zookeeper      | [2024-12-15 18:22:01,218] INFO minSessionTimeout set to 6000 (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,218] INFO maxSessionTimeout set to 60000 (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,219] INFO Response cache size is initialized with value 400. (org.apache.zookeeper.server.ResponseCache)
+zookeeper      | [2024-12-15 18:22:01,220] INFO Response cache size is initialized with value 400. (org.apache.zookeeper.server.ResponseCache)
+zookeeper      | [2024-12-15 18:22:01,221] INFO zookeeper.pathStats.slotCapacity = 60 (org.apache.zookeeper.server.util.RequestPathMetricsCollector)
+zookeeper      | [2024-12-15 18:22:01,221] INFO zookeeper.pathStats.slotDuration = 15 (org.apache.zookeeper.server.util.RequestPathMetricsCollector)
+zookeeper      | [2024-12-15 18:22:01,221] INFO zookeeper.pathStats.maxDepth = 6 (org.apache.zookeeper.server.util.RequestPathMetricsCollector)
+zookeeper      | [2024-12-15 18:22:01,221] INFO zookeeper.pathStats.initialDelay = 5 (org.apache.zookeeper.server.util.RequestPathMetricsCollector)
+zookeeper      | [2024-12-15 18:22:01,221] INFO zookeeper.pathStats.delay = 5 (org.apache.zookeeper.server.util.RequestPathMetricsCollector)
+zookeeper      | [2024-12-15 18:22:01,221] INFO zookeeper.pathStats.enabled = false (org.apache.zookeeper.server.util.RequestPathMetricsCollector)
+zookeeper      | [2024-12-15 18:22:01,225] INFO The max bytes for all large requests are set to 104857600 (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,225] INFO The large request threshold is set to -1 (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,225] INFO Created server with tickTime 3000 minSessionTimeout 6000 maxSessionTimeout 60000 clientPortListenBacklog -1 datadir /var/lib/zookeeper/log/version-2 snapdir /var/lib/zookeeper/data/version-2 (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,271] INFO Logging initialized @942ms to org.eclipse.jetty.util.log.Slf4jLog (org.eclipse.jetty.util.log)
+zookeeper      | [2024-12-15 18:22:01,475] WARN o.e.j.s.ServletContextHandler@7fb4f2a9{/,null,STOPPED} contextPath ends with /* (org.eclipse.jetty.server.handler.ContextHandler)
+zookeeper      | [2024-12-15 18:22:01,475] WARN Empty contextPath (org.eclipse.jetty.server.handler.ContextHandler)
+zookeeper      | [2024-12-15 18:22:01,521] INFO jetty-9.4.51.v20230217; built: 2023-02-17T08:19:37.309Z; git: b45c405e4544384de066f814ed42ae3dceacdd49; jvm 11.0.20+8-LTS (org.eclipse.jetty.server.Server)
+zookeeper      | [2024-12-15 18:22:01,576] INFO DefaultSessionIdManager workerName=node0 (org.eclipse.jetty.server.session)
+zookeeper      | [2024-12-15 18:22:01,576] INFO No SessionScavenger set, using defaults (org.eclipse.jetty.server.session)
+zookeeper      | [2024-12-15 18:22:01,579] INFO node0 Scavenging every 600000ms (org.eclipse.jetty.server.session)
+zookeeper      | [2024-12-15 18:22:01,587] WARN ServletContext@o.e.j.s.ServletContextHandler@7fb4f2a9{/,null,STARTING} has uncovered http methods for path: /* (org.eclipse.jetty.security.SecurityHandler)
+zookeeper      | [2024-12-15 18:22:01,617] INFO Started o.e.j.s.ServletContextHandler@7fb4f2a9{/,null,AVAILABLE} (org.eclipse.jetty.server.handler.ContextHandler)
+zookeeper      | [2024-12-15 18:22:01,667] INFO Started ServerConnector@183ec003{HTTP/1.1, (http/1.1)}{0.0.0.0:8080} (org.eclipse.jetty.server.AbstractConnector)
+zookeeper      | [2024-12-15 18:22:01,668] INFO Started @1339ms (org.eclipse.jetty.server.Server)
+zookeeper      | [2024-12-15 18:22:01,669] INFO Started AdminServer on address 0.0.0.0, port 8080 and command URL /commands (org.apache.zookeeper.server.admin.JettyAdminServer)
+zookeeper      | [2024-12-15 18:22:01,682] INFO Using org.apache.zookeeper.server.NIOServerCnxnFactory as server connection factory (org.apache.zookeeper.server.ServerCnxnFactory)
+zookeeper      | [2024-12-15 18:22:01,685] WARN maxCnxns is not configured, using default value 0. (org.apache.zookeeper.server.ServerCnxnFactory)
+zookeeper      | [2024-12-15 18:22:01,689] INFO Configuring NIO connection handler with 10s sessionless connection timeout, 2 selector thread(s), 32 worker threads, and 64 kB direct buffers. (org.apache.zookeeper.server.NIOServerCnxnFactory)
+zookeeper      | [2024-12-15 18:22:01,693] INFO binding to port 0.0.0.0/0.0.0.0:2181 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+zookeeper      | [2024-12-15 18:22:01,732] INFO Using org.apache.zookeeper.server.watch.WatchManager as watch manager (org.apache.zookeeper.server.watch.WatchManagerFactory)
+zookeeper      | [2024-12-15 18:22:01,732] INFO Using org.apache.zookeeper.server.watch.WatchManager as watch manager (org.apache.zookeeper.server.watch.WatchManagerFactory)
+zookeeper      | [2024-12-15 18:22:01,735] INFO zookeeper.snapshotSizeFactor = 0.33 (org.apache.zookeeper.server.ZKDatabase)
+zookeeper      | [2024-12-15 18:22:01,735] INFO zookeeper.commitLogCount=500 (org.apache.zookeeper.server.ZKDatabase)
+zookeeper      | [2024-12-15 18:22:01,747] INFO zookeeper.snapshot.compression.method = CHECKED (org.apache.zookeeper.server.persistence.SnapStream)
+zookeeper      | [2024-12-15 18:22:01,748] INFO Snapshotting: 0x0 to /var/lib/zookeeper/data/version-2/snapshot.0 (org.apache.zookeeper.server.persistence.FileTxnSnapLog)
+zookeeper      | [2024-12-15 18:22:01,755] INFO Snapshot loaded in 19 ms, highest zxid is 0x0, digest is 1371985504 (org.apache.zookeeper.server.ZKDatabase)
+zookeeper      | [2024-12-15 18:22:01,755] INFO Snapshotting: 0x0 to /var/lib/zookeeper/data/version-2/snapshot.0 (org.apache.zookeeper.server.persistence.FileTxnSnapLog)
+zookeeper      | [2024-12-15 18:22:01,757] INFO Snapshot taken in 2 ms (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper      | [2024-12-15 18:22:01,776] INFO PrepRequestProcessor (sid:0) started, reconfigEnabled=false (org.apache.zookeeper.server.PrepRequestProcessor)
+zookeeper      | [2024-12-15 18:22:01,778] INFO zookeeper.request_throttler.shutdownTimeout = 10000 (org.apache.zookeeper.server.RequestThrottler)
+zookeeper      | [2024-12-15 18:22:01,823] INFO Using checkIntervalMs=60000 maxPerMinute=10000 maxNeverUsedIntervalMs=0 (org.apache.zookeeper.server.ContainerManager)
+zookeeper      | [2024-12-15 18:22:01,825] INFO ZooKeeper audit is disabled. (org.apache.zookeeper.audit.ZKAuditProvider)
+kafka          | [2024-12-15 18:22:02,055] INFO Client environment:zookeeper.version=3.6.3--6401e4ad2087061bc6b9f80dec2d69f2e3c8660a, built on 04/08/2021 16:35 GMT (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:02,057] INFO Client environment:host.name=e28ae1e9ebb8 (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:02,057] INFO Client environment:java.version=11.0.20 (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:02,057] INFO Client environment:java.vendor=Azul Systems, Inc. (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:02,057] INFO Client environment:java.home=/usr/lib/jvm/java-11-zulu-openjdk-ca (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:02,057] INFO Client environment:java.class.path=/usr/share/java/cp-base-new/logredactor-1.0.12.jar:/usr/share/java/cp-base-new/kafka-metadata-7.5.0-ccs.jar:/usr/share/java/cp-base-new/jackson-core-2.14.2.jar:/usr/share/java/cp-base-new/jackson-datatype-jdk8-2.14.2.jar:/usr/share/java/cp-base-new/json-simple-1.1.1.jar:/usr/share/java/cp-base-new/zookeeper-jute-3.6.3.jar:/usr/share/java/cp-base-new/kafka-raft-7.5.0-ccs.jar:/usr/share/java/cp-base-new/slf4j-api-1.7.36.jar:/usr/share/java/cp-base-new/jolokia-core-1.7.1.jar:/usr/share/java/cp-base-new/zstd-jni-1.5.5-1.jar:/usr/share/java/cp-base-new/jose4j-0.9.3.jar:/usr/share/java/cp-base-new/kafka-tools-api-7.5.0-ccs.jar:/usr/share/java/cp-base-new/common-utils-7.5.0.jar:/usr/share/java/cp-base-new/zookeeper-3.6.3.jar:/usr/share/java/cp-base-new/paranamer-2.8.jar:/usr/share/java/cp-base-new/lz4-java-1.8.0.jar:/usr/share/java/cp-base-new/slf4j-reload4j-1.7.36.jar:/usr/share/java/cp-base-new/scala-library-2.13.10.jar:/usr/share/java/cp-base-new/metrics-core-4.1.12.1.jar:/usr/share/java/cp-base-new/minimal-json-0.9.5.jar:/usr/share/java/cp-base-new/kafka-server-common-7.5.0-ccs.jar:/usr/share/java/cp-base-new/kafka-storage-api-7.5.0-ccs.jar:/usr/share/java/cp-base-new/kafka-clients-7.5.0-ccs.jar:/usr/share/java/cp-base-new/kafka_2.13-7.5.0-ccs.jar:/usr/share/java/cp-base-new/jopt-simple-5.0.4.jar:/usr/share/java/cp-base-new/jackson-dataformat-yaml-2.14.2.jar:/usr/share/java/cp-base-new/jackson-dataformat-csv-2.14.2.jar:/usr/share/java/cp-base-new/argparse4j-0.7.0.jar:/usr/share/java/cp-base-new/logredactor-metrics-1.0.12.jar:/usr/share/java/cp-base-new/jmx_prometheus_javaagent-0.18.0.jar:/usr/share/java/cp-base-new/jackson-annotations-2.14.2.jar:/usr/share/java/cp-base-new/kafka-group-coordinator-7.5.0-ccs.jar:/usr/share/java/cp-base-new/kafka-storage-7.5.0-ccs.jar:/usr/share/java/cp-base-new/jolokia-jvm-1.7.1.jar:/usr/share/java/cp-base-new/jackson-module-scala_2.13-2.14.2.jar:/usr/share/java/cp-base-new/scala-logging_2.13-3.9.4.jar:/usr/share/java/cp-base-new/commons-cli-1.4.jar:/usr/share/java/cp-base-new/jackson-databind-2.14.2.jar:/usr/share/java/cp-base-new/disk-usage-agent-7.5.0.jar:/usr/share/java/cp-base-new/snakeyaml-2.0.jar:/usr/share/java/cp-base-new/reload4j-1.2.19.jar:/usr/share/java/cp-base-new/utility-belt-7.5.0.jar:/usr/share/java/cp-base-new/snappy-java-1.1.10.1.jar:/usr/share/java/cp-base-new/audience-annotations-0.5.0.jar:/usr/share/java/cp-base-new/metrics-core-2.2.0.jar:/usr/share/java/cp-base-new/scala-reflect-2.13.10.jar:/usr/share/java/cp-base-new/re2j-1.6.jar:/usr/share/java/cp-base-new/scala-collection-compat_2.13-2.10.0.jar:/usr/share/java/cp-base-new/gson-2.9.0.jar:/usr/share/java/cp-base-new/scala-java8-compat_2.13-1.0.2.jar (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:02,057] INFO Client environment:java.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:02,057] INFO Client environment:java.io.tmpdir=/tmp (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:02,057] INFO Client environment:java.compiler=<NA> (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:02,058] INFO Client environment:os.name=Linux (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:02,058] INFO Client environment:os.arch=amd64 (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:02,058] INFO Client environment:os.version=5.15.133.1-microsoft-standard-WSL2 (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:02,058] INFO Client environment:user.name=kafkauser (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:02,058] INFO Client environment:user.home=/home/kafkauser (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:02,058] INFO Client environment:user.dir=/tmp/hsperfdata_kafkauser (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:02,058] INFO Client environment:os.memory.free=145MB (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:02,058] INFO Client environment:os.memory.max=2488MB (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:02,058] INFO Client environment:os.memory.total=156MB (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:02,066] INFO Initiating client connection, connectString=zookeeper:2181 sessionTimeout=40000 watcher=io.confluent.admin.utils.ZookeeperConnectionWatcher@221af3c0 (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:02,074] INFO Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation (org.apache.zookeeper.common.X509Util)
+kafka          | [2024-12-15 18:22:02,083] INFO jute.maxbuffer value is 1048575 Bytes (org.apache.zookeeper.ClientCnxnSocket)
+kafka          | [2024-12-15 18:22:02,090] INFO zookeeper.request.timeout value is 0. feature enabled=false (org.apache.zookeeper.ClientCnxn)
+kafka          | [2024-12-15 18:22:02,126] INFO Opening socket connection to server zookeeper/172.23.0.2:2181. (org.apache.zookeeper.ClientCnxn)
+kafka          | [2024-12-15 18:22:02,128] INFO SASL config status: Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+kafka          | [2024-12-15 18:22:02,143] INFO Socket connection established, initiating session, client: /172.23.0.3:40882, server: zookeeper/172.23.0.2:2181 (org.apache.zookeeper.ClientCnxn)
+zookeeper      | [2024-12-15 18:22:02,171] INFO Creating new log file: log.1 (org.apache.zookeeper.server.persistence.FileTxnLog)
+kafka          | [2024-12-15 18:22:02,199] INFO Session establishment complete on server zookeeper/172.23.0.2:2181, session id = 0x10002ee88d70000, negotiated timeout = 40000 (org.apache.zookeeper.ClientCnxn)
+kafka          | [2024-12-15 18:22:02,237] WARN An exception was thrown while closing send thread for session 0x10002ee88d70000. (org.apache.zookeeper.ClientCnxn)
+kafka          | EndOfStreamException: Unable to read additional data from server sessionid 0x10002ee88d70000, likely server has closed socket
+kafka          | 	at org.apache.zookeeper.ClientCnxnSocketNIO.doIO(ClientCnxnSocketNIO.java:77)
+kafka          | 	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350)
+kafka          | 	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1290)
+jobmanager     | Starting standalonesession as a console application on host 9087538b99f0.
+kafka          | [2024-12-15 18:22:02,342] INFO Session: 0x10002ee88d70000 closed (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:02,342] INFO EventThread shut down for session: 0x10002ee88d70000 (org.apache.zookeeper.ClientCnxn)
+kafka          | Using log4j config /etc/kafka/log4j.properties
+kafka          | ===> Launching ... 
+kafka          | ===> Launching kafka ... 
+taskmanager-1  | Starting taskexecutor as a console application on host abc0a3b603ca.
+jobmanager     | 2024-12-15 18:22:03,485 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------
+jobmanager     | 2024-12-15 18:22:03,489 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Preconfiguration: 
+jobmanager     | 2024-12-15 18:22:03,490 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - 
+jobmanager     | 
+jobmanager     | 
+jobmanager     | RESOURCE_PARAMS extraction logs:
+jobmanager     | jvm_params: -Xmx1073741824 -Xms1073741824 -XX:MaxMetaspaceSize=268435456
+jobmanager     | dynamic_configs: -D jobmanager.memory.off-heap.size=134217728b -D jobmanager.memory.jvm-overhead.min=201326592b -D jobmanager.memory.jvm-metaspace.size=268435456b -D jobmanager.memory.heap.size=1073741824b -D jobmanager.memory.jvm-overhead.max=201326592b
+jobmanager     | logs: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+jobmanager     | INFO  [] - Using standard YAML parser to load flink configuration file from /opt/flink/conf/config.yaml.
+jobmanager     | INFO  [] - Loading configuration property: blob.server.port, 6124
+jobmanager     | INFO  [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+jobmanager     | INFO  [] - Loading configuration property: taskmanager.bind-host, 0.0.0.0
+jobmanager     | INFO  [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+jobmanager     | INFO  [] - Loading configuration property: jobmanager.rpc.address, jobmanager
+jobmanager     | INFO  [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+jobmanager     | INFO  [] - Loading configuration property: jobmanager.rpc.port, 6123
+jobmanager     | INFO  [] - Loading configuration property: query.server.port, 6125
+jobmanager     | INFO  [] - Loading configuration property: rest.bind-address, 0.0.0.0
+jobmanager     | INFO  [] - Loading configuration property: jobmanager.bind-host, 0.0.0.0
+jobmanager     | INFO  [] - Loading configuration property: parallelism.default, 1
+jobmanager     | INFO  [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+jobmanager     | INFO  [] - Loading configuration property: rest.address, 0.0.0.0
+jobmanager     | INFO  [] - Loading configuration property: env.java.opts.all, --add-exports=java.base/sun.net.util=ALL-UNNAMED --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+jobmanager     | INFO  [] - The derived from fraction jvm overhead memory (160.000mb (167772162 bytes)) is less than its min value 192.000mb (201326592 bytes), min value will be used instead
+jobmanager     | INFO  [] - Final Master Memory configuration:
+jobmanager     | INFO  [] -   Total Process Memory: 1.563gb (1677721600 bytes)
+jobmanager     | INFO  [] -     Total Flink Memory: 1.125gb (1207959552 bytes)
+jobmanager     | INFO  [] -       JVM Heap:         1024.000mb (1073741824 bytes)
+jobmanager     | INFO  [] -       Off-heap:         128.000mb (134217728 bytes)
+jobmanager     | INFO  [] -     JVM Metaspace:      256.000mb (268435456 bytes)
+jobmanager     | INFO  [] -     JVM Overhead:       192.000mb (201326592 bytes)
+jobmanager     | 
+jobmanager     | 2024-12-15 18:22:03,490 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------
+jobmanager     | 2024-12-15 18:22:03,491 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Starting StandaloneSessionClusterEntrypoint (Version: 1.20.0, Scala: 2.12, Rev:b1fe7b4, Date:2024-07-25T04:22:22+02:00)
+jobmanager     | 2024-12-15 18:22:03,491 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  OS current user: flink
+jobmanager     | 2024-12-15 18:22:03,492 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Current Hadoop/Kerberos user: <no hadoop dependency found>
+jobmanager     | 2024-12-15 18:22:03,493 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  JVM: OpenJDK 64-Bit Server VM - Eclipse Adoptium - 11/11.0.25+9
+jobmanager     | 2024-12-15 18:22:03,493 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Arch: amd64
+jobmanager     | 2024-12-15 18:22:03,494 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Maximum heap size: 1024 MiBytes
+jobmanager     | 2024-12-15 18:22:03,494 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  JAVA_HOME: /opt/java/openjdk
+jobmanager     | 2024-12-15 18:22:03,495 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  No Hadoop Dependency available
+jobmanager     | 2024-12-15 18:22:03,496 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  JVM Options:
+jobmanager     | 2024-12-15 18:22:03,496 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Xmx1073741824
+jobmanager     | 2024-12-15 18:22:03,497 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Xms1073741824
+jobmanager     | 2024-12-15 18:22:03,497 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -XX:MaxMetaspaceSize=268435456
+jobmanager     | 2024-12-15 18:22:03,497 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -XX:+IgnoreUnrecognizedVMOptions
+jobmanager     | 2024-12-15 18:22:03,498 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-exports=java.base/sun.net.util=ALL-UNNAMED
+jobmanager     | 2024-12-15 18:22:03,498 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED
+jobmanager     | 2024-12-15 18:22:03,498 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED
+jobmanager     | 2024-12-15 18:22:03,499 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED
+jobmanager     | 2024-12-15 18:22:03,499 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED
+jobmanager     | 2024-12-15 18:22:03,499 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED
+jobmanager     | 2024-12-15 18:22:03,500 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
+jobmanager     | 2024-12-15 18:22:03,500 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED
+jobmanager     | 2024-12-15 18:22:03,500 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.lang=ALL-UNNAMED
+jobmanager     | 2024-12-15 18:22:03,501 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.net=ALL-UNNAMED
+jobmanager     | 2024-12-15 18:22:03,501 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.io=ALL-UNNAMED
+jobmanager     | 2024-12-15 18:22:03,501 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.nio=ALL-UNNAMED
+jobmanager     | 2024-12-15 18:22:03,501 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+jobmanager     | 2024-12-15 18:22:03,502 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+jobmanager     | 2024-12-15 18:22:03,502 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.text=ALL-UNNAMED
+jobmanager     | 2024-12-15 18:22:03,503 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.time=ALL-UNNAMED
+jobmanager     | 2024-12-15 18:22:03,504 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.util=ALL-UNNAMED
+jobmanager     | 2024-12-15 18:22:03,504 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+jobmanager     | 2024-12-15 18:22:03,504 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+jobmanager     | 2024-12-15 18:22:03,504 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+jobmanager     | 2024-12-15 18:22:03,505 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlog.file=/opt/flink/log/flink--standalonesession-0-9087538b99f0.log
+jobmanager     | 2024-12-15 18:22:03,505 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlog4j.configuration=file:/opt/flink/conf/log4j-console.properties
+jobmanager     | 2024-12-15 18:22:03,505 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlog4j.configurationFile=file:/opt/flink/conf/log4j-console.properties
+jobmanager     | 2024-12-15 18:22:03,505 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlogback.configurationFile=file:/opt/flink/conf/logback-console.xml
+jobmanager     | 2024-12-15 18:22:03,506 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Program Arguments:
+jobmanager     | 2024-12-15 18:22:03,508 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+jobmanager     | 2024-12-15 18:22:03,509 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.off-heap.size=134217728b
+jobmanager     | 2024-12-15 18:22:03,509 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+jobmanager     | 2024-12-15 18:22:03,509 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.jvm-overhead.min=201326592b
+jobmanager     | 2024-12-15 18:22:03,510 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+jobmanager     | 2024-12-15 18:22:03,510 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.jvm-metaspace.size=268435456b
+jobmanager     | 2024-12-15 18:22:03,511 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+jobmanager     | 2024-12-15 18:22:03,511 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.heap.size=1073741824b
+jobmanager     | 2024-12-15 18:22:03,511 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+jobmanager     | 2024-12-15 18:22:03,512 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.jvm-overhead.max=201326592b
+jobmanager     | 2024-12-15 18:22:03,512 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --configDir
+jobmanager     | 2024-12-15 18:22:03,513 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     /opt/flink/conf
+jobmanager     | 2024-12-15 18:22:03,513 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --executionMode
+jobmanager     | 2024-12-15 18:22:03,513 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     cluster
+jobmanager     | 2024-12-15 18:22:03,514 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Classpath: /opt/flink/lib/flink-cep-1.20.0.jar:/opt/flink/lib/flink-connector-files-1.20.0.jar:/opt/flink/lib/flink-csv-1.20.0.jar:/opt/flink/lib/flink-json-1.20.0.jar:/opt/flink/lib/flink-scala_2.12-1.20.0.jar:/opt/flink/lib/flink-sql-connector-kafka-3.3.0-1.20.jar:/opt/flink/lib/flink-table-api-java-uber-1.20.0.jar:/opt/flink/lib/flink-table-planner-loader-1.20.0.jar:/opt/flink/lib/flink-table-runtime-1.20.0.jar:/opt/flink/lib/log4j-1.2-api-2.17.1.jar:/opt/flink/lib/log4j-api-2.17.1.jar:/opt/flink/lib/log4j-core-2.17.1.jar:/opt/flink/lib/log4j-slf4j-impl-2.17.1.jar:/opt/flink/lib/flink-dist-1.20.0.jar::::
+jobmanager     | 2024-12-15 18:22:03,514 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------
+jobmanager     | 2024-12-15 18:22:03,516 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Registered UNIX signal handlers for [TERM, HUP, INT]
+jobmanager     | 2024-12-15 18:22:03,535 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Using standard YAML parser to load flink configuration file from /opt/flink/conf/config.yaml.
+kafka          | [2024-12-15 18:22:03,594] INFO Registered kafka:type=kafka.Log4jController MBean (kafka.utils.Log4jControllerRegistration$)
+jobmanager     | 2024-12-15 18:22:03,622 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: blob.server.port, 6124
+jobmanager     | 2024-12-15 18:22:03,622 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+jobmanager     | 2024-12-15 18:22:03,623 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.bind-host, 0.0.0.0
+jobmanager     | 2024-12-15 18:22:03,624 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+jobmanager     | 2024-12-15 18:22:03,624 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.address, jobmanager
+jobmanager     | 2024-12-15 18:22:03,625 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+jobmanager     | 2024-12-15 18:22:03,625 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.port, 6123
+jobmanager     | 2024-12-15 18:22:03,626 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: query.server.port, 6125
+jobmanager     | 2024-12-15 18:22:03,626 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.bind-address, 0.0.0.0
+jobmanager     | 2024-12-15 18:22:03,626 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.bind-host, 0.0.0.0
+jobmanager     | 2024-12-15 18:22:03,626 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: parallelism.default, 1
+jobmanager     | 2024-12-15 18:22:03,627 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+jobmanager     | 2024-12-15 18:22:03,627 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.address, 0.0.0.0
+jobmanager     | 2024-12-15 18:22:03,628 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: env.java.opts.all, --add-exports=java.base/sun.net.util=ALL-UNNAMED --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+jobmanager     | 2024-12-15 18:22:03,628 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.off-heap.size, 134217728b
+jobmanager     | 2024-12-15 18:22:03,629 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.jvm-overhead.min, 201326592b
+jobmanager     | 2024-12-15 18:22:03,629 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.jvm-metaspace.size, 268435456b
+jobmanager     | 2024-12-15 18:22:03,629 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.heap.size, 1073741824b
+jobmanager     | 2024-12-15 18:22:03,629 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.jvm-overhead.max, 201326592b
+jobmanager     | 2024-12-15 18:22:03,670 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Starting StandaloneSessionClusterEntrypoint.
+jobmanager     | 2024-12-15 18:22:03,730 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Install default filesystem.
+jobmanager     | 2024-12-15 18:22:03,737 INFO  org.apache.flink.core.fs.FileSystem                          [] - Hadoop is not in the classpath/dependencies. The extended set of supported File Systems via Hadoop is not available.
+jobmanager     | 2024-12-15 18:22:03,761 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-jmx
+jobmanager     | 2024-12-15 18:22:03,770 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: external-resource-gpu
+jobmanager     | 2024-12-15 18:22:03,771 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-influx
+jobmanager     | 2024-12-15 18:22:03,771 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-graphite
+jobmanager     | 2024-12-15 18:22:03,772 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-slf4j
+jobmanager     | 2024-12-15 18:22:03,773 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-statsd
+jobmanager     | 2024-12-15 18:22:03,773 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-prometheus
+jobmanager     | 2024-12-15 18:22:03,773 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-datadog
+jobmanager     | 2024-12-15 18:22:03,806 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Install security context.
+jobmanager     | 2024-12-15 18:22:03,834 INFO  org.apache.flink.runtime.security.modules.HadoopModuleFactory [] - Cannot create Hadoop Security Module because Hadoop cannot be found in the Classpath.
+jobmanager     | 2024-12-15 18:22:03,842 INFO  org.apache.flink.runtime.security.modules.JaasModule         [] - Jaas file will be created as /tmp/jaas-793592905993100139.conf.
+jobmanager     | 2024-12-15 18:22:03,851 INFO  org.apache.flink.runtime.security.contexts.HadoopSecurityContextFactory [] - Cannot install HadoopSecurityContext because Hadoop cannot be found in the Classpath.
+jobmanager     | 2024-12-15 18:22:03,855 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Initializing cluster services.
+jobmanager     | 2024-12-15 18:22:03,865 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Using working directory: WorkingDirectory(/tmp/jm_7f28177dbb21efecfd020abea7bcb551).
+taskmanager-1  | 2024-12-15 18:22:04,109 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - --------------------------------------------------------------------------------
+taskmanager-1  | 2024-12-15 18:22:04,113 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Preconfiguration: 
+taskmanager-1  | 2024-12-15 18:22:04,113 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - 
+taskmanager-1  | 
+taskmanager-1  | 
+taskmanager-1  | RESOURCE_PARAMS extraction logs:
+taskmanager-1  | jvm_params: -Xmx536870902 -Xms536870902 -XX:MaxDirectMemorySize=268435458 -XX:MaxMetaspaceSize=268435456
+taskmanager-1  | dynamic_configs: -D taskmanager.memory.network.min=134217730b -D taskmanager.cpu.cores=2.0 -D taskmanager.memory.task.off-heap.size=0b -D taskmanager.memory.jvm-metaspace.size=268435456b -D external-resources=none -D taskmanager.memory.jvm-overhead.min=201326592b -D taskmanager.memory.framework.off-heap.size=134217728b -D taskmanager.memory.network.max=134217730b -D taskmanager.memory.framework.heap.size=134217728b -D taskmanager.memory.managed.size=536870920b -D taskmanager.memory.task.heap.size=402653174b -D taskmanager.numberOfTaskSlots=2 -D taskmanager.memory.jvm-overhead.max=201326592b
+taskmanager-1  | logs: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+taskmanager-1  | INFO  [] - Using standard YAML parser to load flink configuration file from /opt/flink/conf/config.yaml.
+taskmanager-1  | INFO  [] - Loading configuration property: blob.server.port, 6124
+taskmanager-1  | INFO  [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+taskmanager-1  | INFO  [] - Loading configuration property: taskmanager.bind-host, 0.0.0.0
+taskmanager-1  | INFO  [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+taskmanager-1  | INFO  [] - Loading configuration property: jobmanager.rpc.address, jobmanager
+taskmanager-1  | INFO  [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+taskmanager-1  | INFO  [] - Loading configuration property: jobmanager.rpc.port, 6123
+taskmanager-1  | INFO  [] - Loading configuration property: query.server.port, 6125
+taskmanager-1  | INFO  [] - Loading configuration property: rest.bind-address, 0.0.0.0
+taskmanager-1  | INFO  [] - Loading configuration property: jobmanager.bind-host, 0.0.0.0
+taskmanager-1  | INFO  [] - Loading configuration property: parallelism.default, 1
+taskmanager-1  | INFO  [] - Loading configuration property: taskmanager.numberOfTaskSlots, 2
+taskmanager-1  | INFO  [] - Loading configuration property: rest.address, 0.0.0.0
+taskmanager-1  | INFO  [] - Loading configuration property: env.java.opts.all, --add-exports=java.base/sun.net.util=ALL-UNNAMED --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+taskmanager-1  | INFO  [] - The derived from fraction jvm overhead memory (172.800mb (181193935 bytes)) is less than its min value 192.000mb (201326592 bytes), min value will be used instead
+taskmanager-1  | INFO  [] - Final TaskExecutor Memory configuration:
+taskmanager-1  | INFO  [] -   Total Process Memory:          1.688gb (1811939328 bytes)
+taskmanager-1  | INFO  [] -     Total Flink Memory:          1.250gb (1342177280 bytes)
+taskmanager-1  | INFO  [] -       Total JVM Heap Memory:     512.000mb (536870902 bytes)
+taskmanager-1  | INFO  [] -         Framework:               128.000mb (134217728 bytes)
+taskmanager-1  | INFO  [] -         Task:                    384.000mb (402653174 bytes)
+taskmanager-1  | INFO  [] -       Total Off-heap Memory:     768.000mb (805306378 bytes)
+taskmanager-1  | INFO  [] -         Managed:                 512.000mb (536870920 bytes)
+taskmanager-1  | INFO  [] -         Total JVM Direct Memory: 256.000mb (268435458 bytes)
+taskmanager-1  | INFO  [] -           Framework:             128.000mb (134217728 bytes)
+taskmanager-1  | INFO  [] -           Task:                  0 bytes
+taskmanager-1  | INFO  [] -           Network:               128.000mb (134217730 bytes)
+taskmanager-1  | INFO  [] -     JVM Metaspace:               256.000mb (268435456 bytes)
+taskmanager-1  | INFO  [] -     JVM Overhead:                192.000mb (201326592 bytes)
+taskmanager-1  | 
+taskmanager-1  | 2024-12-15 18:22:04,114 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - --------------------------------------------------------------------------------
+taskmanager-1  | 2024-12-15 18:22:04,114 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Starting TaskManager (Version: 1.20.0, Scala: 2.12, Rev:b1fe7b4, Date:2024-07-25T04:22:22+02:00)
+taskmanager-1  | 2024-12-15 18:22:04,115 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  OS current user: flink
+taskmanager-1  | 2024-12-15 18:22:04,115 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Current Hadoop/Kerberos user: <no hadoop dependency found>
+taskmanager-1  | 2024-12-15 18:22:04,116 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  JVM: OpenJDK 64-Bit Server VM - Eclipse Adoptium - 11/11.0.25+9
+taskmanager-1  | 2024-12-15 18:22:04,116 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Arch: amd64
+taskmanager-1  | 2024-12-15 18:22:04,116 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Maximum heap size: 512 MiBytes
+taskmanager-1  | 2024-12-15 18:22:04,117 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  JAVA_HOME: /opt/java/openjdk
+taskmanager-1  | 2024-12-15 18:22:04,117 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  No Hadoop Dependency available
+taskmanager-1  | 2024-12-15 18:22:04,118 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  JVM Options:
+taskmanager-1  | 2024-12-15 18:22:04,118 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Xmx536870902
+taskmanager-1  | 2024-12-15 18:22:04,118 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Xms536870902
+taskmanager-1  | 2024-12-15 18:22:04,118 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -XX:MaxDirectMemorySize=268435458
+taskmanager-1  | 2024-12-15 18:22:04,118 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -XX:MaxMetaspaceSize=268435456
+taskmanager-1  | 2024-12-15 18:22:04,119 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -XX:+IgnoreUnrecognizedVMOptions
+taskmanager-1  | 2024-12-15 18:22:04,119 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-exports=java.base/sun.net.util=ALL-UNNAMED
+taskmanager-1  | 2024-12-15 18:22:04,119 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED
+taskmanager-1  | 2024-12-15 18:22:04,120 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED
+taskmanager-1  | 2024-12-15 18:22:04,120 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED
+taskmanager-1  | 2024-12-15 18:22:04,121 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED
+taskmanager-1  | 2024-12-15 18:22:04,121 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED
+taskmanager-1  | 2024-12-15 18:22:04,121 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
+taskmanager-1  | 2024-12-15 18:22:04,122 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED
+taskmanager-1  | 2024-12-15 18:22:04,122 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.lang=ALL-UNNAMED
+taskmanager-1  | 2024-12-15 18:22:04,123 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.net=ALL-UNNAMED
+taskmanager-1  | 2024-12-15 18:22:04,123 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.io=ALL-UNNAMED
+taskmanager-1  | 2024-12-15 18:22:04,123 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.nio=ALL-UNNAMED
+taskmanager-1  | 2024-12-15 18:22:04,124 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+taskmanager-1  | 2024-12-15 18:22:04,124 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+taskmanager-1  | 2024-12-15 18:22:04,124 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.text=ALL-UNNAMED
+taskmanager-1  | 2024-12-15 18:22:04,125 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.time=ALL-UNNAMED
+taskmanager-1  | 2024-12-15 18:22:04,125 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.util=ALL-UNNAMED
+taskmanager-1  | 2024-12-15 18:22:04,126 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+taskmanager-1  | 2024-12-15 18:22:04,126 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+taskmanager-1  | 2024-12-15 18:22:04,126 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+taskmanager-1  | 2024-12-15 18:22:04,126 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlog.file=/opt/flink/log/flink--taskexecutor-0-abc0a3b603ca.log
+taskmanager-1  | 2024-12-15 18:22:04,126 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlog4j.configuration=file:/opt/flink/conf/log4j-console.properties
+taskmanager-1  | 2024-12-15 18:22:04,126 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlog4j.configurationFile=file:/opt/flink/conf/log4j-console.properties
+taskmanager-1  | 2024-12-15 18:22:04,127 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlogback.configurationFile=file:/opt/flink/conf/logback-console.xml
+taskmanager-1  | 2024-12-15 18:22:04,127 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Program Arguments:
+taskmanager-1  | 2024-12-15 18:22:04,130 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --configDir
+taskmanager-1  | 2024-12-15 18:22:04,131 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     /opt/flink/conf
+taskmanager-1  | 2024-12-15 18:22:04,131 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+taskmanager-1  | 2024-12-15 18:22:04,132 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.network.min=134217730b
+taskmanager-1  | 2024-12-15 18:22:04,132 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+taskmanager-1  | 2024-12-15 18:22:04,132 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.cpu.cores=2.0
+taskmanager-1  | 2024-12-15 18:22:04,133 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+taskmanager-1  | 2024-12-15 18:22:04,133 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.task.off-heap.size=0b
+taskmanager-1  | 2024-12-15 18:22:04,133 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+taskmanager-1  | 2024-12-15 18:22:04,133 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.jvm-metaspace.size=268435456b
+taskmanager-1  | 2024-12-15 18:22:04,134 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+taskmanager-1  | 2024-12-15 18:22:04,134 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     external-resources=none
+taskmanager-1  | 2024-12-15 18:22:04,134 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+taskmanager-1  | 2024-12-15 18:22:04,135 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.jvm-overhead.min=201326592b
+taskmanager-1  | 2024-12-15 18:22:04,135 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+taskmanager-1  | 2024-12-15 18:22:04,135 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.framework.off-heap.size=134217728b
+taskmanager-1  | 2024-12-15 18:22:04,136 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+taskmanager-1  | 2024-12-15 18:22:04,136 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.network.max=134217730b
+taskmanager-1  | 2024-12-15 18:22:04,136 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+taskmanager-1  | 2024-12-15 18:22:04,137 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.framework.heap.size=134217728b
+taskmanager-1  | 2024-12-15 18:22:04,137 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+taskmanager-1  | 2024-12-15 18:22:04,138 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.managed.size=536870920b
+taskmanager-1  | 2024-12-15 18:22:04,138 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+taskmanager-1  | 2024-12-15 18:22:04,138 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.task.heap.size=402653174b
+taskmanager-1  | 2024-12-15 18:22:04,138 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+taskmanager-1  | 2024-12-15 18:22:04,139 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.numberOfTaskSlots=2
+taskmanager-1  | 2024-12-15 18:22:04,139 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+taskmanager-1  | 2024-12-15 18:22:04,139 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.jvm-overhead.max=201326592b
+taskmanager-1  | 2024-12-15 18:22:04,139 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Classpath: /opt/flink/lib/flink-cep-1.20.0.jar:/opt/flink/lib/flink-connector-files-1.20.0.jar:/opt/flink/lib/flink-csv-1.20.0.jar:/opt/flink/lib/flink-json-1.20.0.jar:/opt/flink/lib/flink-scala_2.12-1.20.0.jar:/opt/flink/lib/flink-sql-connector-kafka-3.3.0-1.20.jar:/opt/flink/lib/flink-table-api-java-uber-1.20.0.jar:/opt/flink/lib/flink-table-planner-loader-1.20.0.jar:/opt/flink/lib/flink-table-runtime-1.20.0.jar:/opt/flink/lib/log4j-1.2-api-2.17.1.jar:/opt/flink/lib/log4j-api-2.17.1.jar:/opt/flink/lib/log4j-core-2.17.1.jar:/opt/flink/lib/log4j-slf4j-impl-2.17.1.jar:/opt/flink/lib/flink-dist-1.20.0.jar::::
+taskmanager-1  | 2024-12-15 18:22:04,140 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - --------------------------------------------------------------------------------
+taskmanager-1  | 2024-12-15 18:22:04,142 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Registered UNIX signal handlers for [TERM, HUP, INT]
+taskmanager-1  | 2024-12-15 18:22:04,148 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Maximum number of open file descriptors is 1048576.
+taskmanager-1  | 2024-12-15 18:22:04,160 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Using standard YAML parser to load flink configuration file from /opt/flink/conf/config.yaml.
+kafka          | [2024-12-15 18:22:04,204] INFO Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation (org.apache.zookeeper.common.X509Util)
+taskmanager-1  | 2024-12-15 18:22:04,226 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: blob.server.port, 6124
+taskmanager-1  | 2024-12-15 18:22:04,226 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+taskmanager-1  | 2024-12-15 18:22:04,227 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.bind-host, 0.0.0.0
+taskmanager-1  | 2024-12-15 18:22:04,227 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+taskmanager-1  | 2024-12-15 18:22:04,227 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.address, jobmanager
+taskmanager-1  | 2024-12-15 18:22:04,228 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+taskmanager-1  | 2024-12-15 18:22:04,228 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.port, 6123
+taskmanager-1  | 2024-12-15 18:22:04,229 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: query.server.port, 6125
+taskmanager-1  | 2024-12-15 18:22:04,229 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.bind-address, 0.0.0.0
+taskmanager-1  | 2024-12-15 18:22:04,230 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.bind-host, 0.0.0.0
+taskmanager-1  | 2024-12-15 18:22:04,230 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: parallelism.default, 1
+taskmanager-1  | 2024-12-15 18:22:04,230 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.numberOfTaskSlots, 2
+taskmanager-1  | 2024-12-15 18:22:04,230 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.address, 0.0.0.0
+taskmanager-1  | 2024-12-15 18:22:04,231 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: env.java.opts.all, --add-exports=java.base/sun.net.util=ALL-UNNAMED --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+taskmanager-1  | 2024-12-15 18:22:04,231 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.network.min, 134217730b
+taskmanager-1  | 2024-12-15 18:22:04,232 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.jvm-metaspace.size, 268435456b
+taskmanager-1  | 2024-12-15 18:22:04,232 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.task.off-heap.size, 0b
+taskmanager-1  | 2024-12-15 18:22:04,232 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.cpu.cores, 2.0
+taskmanager-1  | 2024-12-15 18:22:04,233 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: external-resources, none
+taskmanager-1  | 2024-12-15 18:22:04,233 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.jvm-overhead.min, 201326592b
+taskmanager-1  | 2024-12-15 18:22:04,234 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.framework.off-heap.size, 134217728b
+taskmanager-1  | 2024-12-15 18:22:04,234 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.network.max, 134217730b
+taskmanager-1  | 2024-12-15 18:22:04,234 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.framework.heap.size, 134217728b
+taskmanager-1  | 2024-12-15 18:22:04,234 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.managed.size, 536870920b
+taskmanager-1  | 2024-12-15 18:22:04,235 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.task.heap.size, 402653174b
+taskmanager-1  | 2024-12-15 18:22:04,235 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.numberOfTaskSlots, 2
+taskmanager-1  | 2024-12-15 18:22:04,235 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.jvm-overhead.max, 201326592b
+jobmanager     | 2024-12-15 18:22:04,246 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Trying to start actor system, external address jobmanager:6123, bind address 0.0.0.0:6123.
+taskmanager-1  | 2024-12-15 18:22:04,303 INFO  org.apache.flink.core.fs.FileSystem                          [] - Hadoop is not in the classpath/dependencies. The extended set of supported File Systems via Hadoop is not available.
+taskmanager-1  | 2024-12-15 18:22:04,323 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-jmx
+taskmanager-1  | 2024-12-15 18:22:04,329 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: external-resource-gpu
+taskmanager-1  | 2024-12-15 18:22:04,330 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-influx
+taskmanager-1  | 2024-12-15 18:22:04,330 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-graphite
+taskmanager-1  | 2024-12-15 18:22:04,331 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-slf4j
+taskmanager-1  | 2024-12-15 18:22:04,331 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-statsd
+taskmanager-1  | 2024-12-15 18:22:04,331 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-prometheus
+taskmanager-1  | 2024-12-15 18:22:04,332 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-datadog
+kafka          | [2024-12-15 18:22:04,340] INFO Registered signal handlers for TERM, INT, HUP (org.apache.kafka.common.utils.LoggingSignalHandler)
+kafka          | [2024-12-15 18:22:04,343] INFO starting (kafka.server.KafkaServer)
+kafka          | [2024-12-15 18:22:04,344] INFO Connecting to zookeeper on zookeeper:2181 (kafka.server.KafkaServer)
+taskmanager-1  | 2024-12-15 18:22:04,357 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - StateChangelogStorageLoader initialized with shortcut names {memory,filesystem}.
+taskmanager-1  | 2024-12-15 18:22:04,357 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+taskmanager-1  | 2024-12-15 18:22:04,357 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+taskmanager-1  | 2024-12-15 18:22:04,357 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+taskmanager-1  | 2024-12-15 18:22:04,358 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+taskmanager-1  | 2024-12-15 18:22:04,358 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+taskmanager-1  | 2024-12-15 18:22:04,358 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+taskmanager-1  | 2024-12-15 18:22:04,359 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+taskmanager-1  | 2024-12-15 18:22:04,359 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+taskmanager-1  | 2024-12-15 18:22:04,371 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - StateChangelogStorageLoader initialized with shortcut names {memory,filesystem}.
+kafka          | [2024-12-15 18:22:04,378] INFO [ZooKeeperClient Kafka server] Initializing a new session to zookeeper:2181. (kafka.zookeeper.ZooKeeperClient)
+kafka          | [2024-12-15 18:22:04,388] INFO Client environment:zookeeper.version=3.6.4--d65253dcf68e9097c6e95a126463fd5fdeb4521c, built on 12/18/2022 18:10 GMT (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:04,388] INFO Client environment:host.name=e28ae1e9ebb8 (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:04,388] INFO Client environment:java.version=11.0.20 (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:04,388] INFO Client environment:java.vendor=Azul Systems, Inc. (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:04,388] INFO Client environment:java.home=/usr/lib/jvm/java-11-zulu-openjdk-ca (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:04,388] INFO Client environment:java.class.path=/usr/bin/../share/java/kafka/jersey-client-2.39.1.jar:/usr/bin/../share/java/kafka/jersey-common-2.39.1.jar:/usr/bin/../share/java/kafka/kafka-metadata-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/jakarta.validation-api-2.0.2.jar:/usr/bin/../share/java/kafka/jakarta.ws.rs-api-2.1.6.jar:/usr/bin/../share/java/kafka/kafka.jar:/usr/bin/../share/java/kafka/jackson-datatype-jdk8-2.13.5.jar:/usr/bin/../share/java/kafka/netty-common-4.1.96.Final.jar:/usr/bin/../share/java/kafka/netty-transport-classes-epoll-4.1.96.Final.jar:/usr/bin/../share/java/kafka/hk2-utils-2.6.1.jar:/usr/bin/../share/java/kafka/netty-buffer-4.1.96.Final.jar:/usr/bin/../share/java/kafka/kafka-raft-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/jaxb-api-2.3.1.jar:/usr/bin/../share/java/kafka/hk2-api-2.6.1.jar:/usr/bin/../share/java/kafka/javax.ws.rs-api-2.1.1.jar:/usr/bin/../share/java/kafka/audience-annotations-0.13.0.jar:/usr/bin/../share/java/kafka/jersey-container-servlet-2.39.1.jar:/usr/bin/../share/java/kafka/reflections-0.9.12.jar:/usr/bin/../share/java/kafka/slf4j-api-1.7.36.jar:/usr/bin/../share/java/kafka/javax.servlet-api-3.1.0.jar:/usr/bin/../share/java/kafka/zstd-jni-1.5.5-1.jar:/usr/bin/../share/java/kafka/jackson-jaxrs-base-2.13.5.jar:/usr/bin/../share/java/kafka/zookeeper-3.6.4.jar:/usr/bin/../share/java/kafka/activation-1.1.1.jar:/usr/bin/../share/java/kafka/reload4j-1.2.25.jar:/usr/bin/../share/java/kafka/jakarta.annotation-api-1.3.5.jar:/usr/bin/../share/java/kafka/jose4j-0.9.3.jar:/usr/bin/../share/java/kafka/kafka-tools-api-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/jetty-continuation-9.4.51.v20230217.jar:/usr/bin/../share/java/kafka/paranamer-2.8.jar:/usr/bin/../share/java/kafka/kafka-streams-examples-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/lz4-java-1.8.0.jar:/usr/bin/../share/java/kafka/slf4j-reload4j-1.7.36.jar:/usr/bin/../share/java/kafka/scala-library-2.13.10.jar:/usr/bin/../share/java/kafka/jakarta.xml.bind-api-2.3.3.jar:/usr/bin/../share/java/kafka/jetty-server-9.4.51.v20230217.jar:/usr/bin/../share/java/kafka/plexus-utils-3.3.0.jar:/usr/bin/../share/java/kafka/metrics-core-4.1.12.1.jar:/usr/bin/../share/java/kafka/snappy-java-1.1.10.0.jar:/usr/bin/../share/java/kafka/connect-runtime-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/kafka-server-common-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/kafka-storage-api-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/connect-mirror-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/netty-transport-native-epoll-4.1.96.Final.jar:/usr/bin/../share/java/kafka/kafka-tools-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/trogdor-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/jakarta.activation-api-1.2.2.jar:/usr/bin/../share/java/kafka/kafka-clients-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/kafka_2.13-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/jopt-simple-5.0.4.jar:/usr/bin/../share/java/kafka/kafka-streams-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/netty-transport-native-unix-common-4.1.96.Final.jar:/usr/bin/../share/java/kafka/connect-basic-auth-extension-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/netty-transport-4.1.96.Final.jar:/usr/bin/../share/java/kafka/netty-resolver-4.1.96.Final.jar:/usr/bin/../share/java/kafka/jetty-servlets-9.4.51.v20230217.jar:/usr/bin/../share/java/kafka/kafka-log4j-appender-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/rocksdbjni-7.1.2.jar:/usr/bin/../share/java/kafka/jetty-io-9.4.51.v20230217.jar:/usr/bin/../share/java/kafka/zookeeper-jute-3.6.4.jar:/usr/bin/../share/java/kafka/javax.annotation-api-1.3.2.jar:/usr/bin/../share/java/kafka/jackson-module-jaxb-annotations-2.13.5.jar:/usr/bin/../share/java/kafka/argparse4j-0.7.0.jar:/usr/bin/../share/java/kafka/jetty-security-9.4.51.v20230217.jar:/usr/bin/../share/java/kafka/kafka-streams-test-utils-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/commons-lang3-3.8.1.jar:/usr/bin/../share/java/kafka/kafka-group-coordinator-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/kafka-storage-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/maven-artifact-3.8.4.jar:/usr/bin/../share/java/kafka/jetty-http-9.4.51.v20230217.jar:/usr/bin/../share/java/kafka/jersey-hk2-2.39.1.jar:/usr/bin/../share/java/kafka/jackson-annotations-2.13.5.jar:/usr/bin/../share/java/kafka/jackson-core-2.13.5.jar:/usr/bin/../share/java/kafka/osgi-resource-locator-1.0.3.jar:/usr/bin/../share/java/kafka/connect-json-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/jetty-servlet-9.4.51.v20230217.jar:/usr/bin/../share/java/kafka/jetty-util-9.4.51.v20230217.jar:/usr/bin/../share/java/kafka/connect-api-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/javassist-3.29.2-GA.jar:/usr/bin/../share/java/kafka/javax.activation-api-1.2.0.jar:/usr/bin/../share/java/kafka/jackson-databind-2.13.5.jar:/usr/bin/../share/java/kafka/connect-transforms-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/scala-logging_2.13-3.9.4.jar:/usr/bin/../share/java/kafka/commons-cli-1.4.jar:/usr/bin/../share/java/kafka/jetty-client-9.4.51.v20230217.jar:/usr/bin/../share/java/kafka/jakarta.inject-2.6.1.jar:/usr/bin/../share/java/kafka/jersey-server-2.39.1.jar:/usr/bin/../share/java/kafka/connect-mirror-client-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/swagger-annotations-2.2.8.jar:/usr/bin/../share/java/kafka/metrics-core-2.2.0.jar:/usr/bin/../share/java/kafka/netty-codec-4.1.96.Final.jar:/usr/bin/../share/java/kafka/scala-reflect-2.13.10.jar:/usr/bin/../share/java/kafka/jackson-jaxrs-json-provider-2.13.5.jar:/usr/bin/../share/java/kafka/jetty-util-ajax-9.4.51.v20230217.jar:/usr/bin/../share/java/kafka/jersey-container-servlet-core-2.39.1.jar:/usr/bin/../share/java/kafka/kafka-streams-scala_2.13-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/jline-3.22.0.jar:/usr/bin/../share/java/kafka/netty-handler-4.1.96.Final.jar:/usr/bin/../share/java/kafka/jackson-dataformat-csv-2.13.5.jar:/usr/bin/../share/java/kafka/hk2-locator-2.6.1.jar:/usr/bin/../share/java/kafka/kafka-shell-7.5.0-ccs.jar:/usr/bin/../share/java/kafka/scala-collection-compat_2.13-2.10.0.jar:/usr/bin/../share/java/kafka/jackson-module-scala_2.13-2.13.5.jar:/usr/bin/../share/java/kafka/aopalliance-repackaged-2.6.1.jar:/usr/bin/../share/java/kafka/scala-java8-compat_2.13-1.0.2.jar:/usr/bin/../share/java/confluent-telemetry/* (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:04,388] INFO Client environment:java.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:04,388] INFO Client environment:java.io.tmpdir=/tmp (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:04,388] INFO Client environment:java.compiler=<NA> (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:04,388] INFO Client environment:os.name=Linux (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:04,388] INFO Client environment:os.arch=amd64 (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:04,388] INFO Client environment:os.version=5.15.133.1-microsoft-standard-WSL2 (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:04,388] INFO Client environment:user.name=kafkauser (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:04,388] INFO Client environment:user.home=/home/kafkauser (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:04,388] INFO Client environment:user.dir=/tmp/hsperfdata_kafkauser (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:04,389] INFO Client environment:os.memory.free=1009MB (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:04,389] INFO Client environment:os.memory.max=1024MB (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:04,389] INFO Client environment:os.memory.total=1024MB (org.apache.zookeeper.ZooKeeper)
+kafka          | [2024-12-15 18:22:04,393] INFO Initiating client connection, connectString=zookeeper:2181 sessionTimeout=18000 watcher=kafka.zookeeper.ZooKeeperClient$ZooKeeperClientWatcher$@1c32386d (org.apache.zookeeper.ZooKeeper)
+taskmanager-1  | 2024-12-15 18:22:04,396 INFO  org.apache.flink.runtime.security.modules.HadoopModuleFactory [] - Cannot create Hadoop Security Module because Hadoop cannot be found in the Classpath.
+kafka          | [2024-12-15 18:22:04,402] INFO jute.maxbuffer value is 4194304 Bytes (org.apache.zookeeper.ClientCnxnSocket)
+kafka          | [2024-12-15 18:22:04,410] INFO zookeeper.request.timeout value is 0. feature enabled=false (org.apache.zookeeper.ClientCnxn)
+kafka          | [2024-12-15 18:22:04,415] INFO [ZooKeeperClient Kafka server] Waiting until connected. (kafka.zookeeper.ZooKeeperClient)
+taskmanager-1  | 2024-12-15 18:22:04,418 INFO  org.apache.flink.runtime.security.modules.JaasModule         [] - Jaas file will be created as /tmp/jaas-12831812400894237106.conf.
+kafka          | [2024-12-15 18:22:04,422] INFO Opening socket connection to server zookeeper/172.23.0.2:2181. (org.apache.zookeeper.ClientCnxn)
+taskmanager-1  | 2024-12-15 18:22:04,427 INFO  org.apache.flink.runtime.security.contexts.HadoopSecurityContextFactory [] - Cannot install HadoopSecurityContext because Hadoop cannot be found in the Classpath.
+kafka          | [2024-12-15 18:22:04,433] INFO Socket connection established, initiating session, client: /172.23.0.3:40894, server: zookeeper/172.23.0.2:2181 (org.apache.zookeeper.ClientCnxn)
+kafka          | [2024-12-15 18:22:04,455] INFO Session establishment complete on server zookeeper/172.23.0.2:2181, session id = 0x10002ee88d70001, negotiated timeout = 18000 (org.apache.zookeeper.ClientCnxn)
+kafka          | [2024-12-15 18:22:04,462] INFO [ZooKeeperClient Kafka server] Connected. (kafka.zookeeper.ZooKeeperClient)
+taskmanager-1  | 2024-12-15 18:22:04,730 INFO  org.apache.flink.runtime.util.LeaderRetrievalUtils           [] - Trying to select the network interface and address to use by connecting to the leading JobManager.
+taskmanager-1  | 2024-12-15 18:22:04,730 INFO  org.apache.flink.runtime.util.LeaderRetrievalUtils           [] - TaskManager will try to connect for PT10S before falling back to heuristics
+kafka          | [2024-12-15 18:22:05,004] INFO Cluster ID = 7vCaCBpPROqGfZzXpiQFMA (kafka.server.KafkaServer)
+kafka          | [2024-12-15 18:22:05,009] WARN No meta.properties file under dir /var/lib/kafka/data/meta.properties (kafka.server.BrokerMetadataCheckpoint)
+kafka          | [2024-12-15 18:22:05,110] INFO KafkaConfig values: 
+kafka          | 	advertised.listeners = PLAINTEXT://kafka:9092
+kafka          | 	alter.config.policy.class.name = null
+kafka          | 	alter.log.dirs.replication.quota.window.num = 11
+kafka          | 	alter.log.dirs.replication.quota.window.size.seconds = 1
+kafka          | 	authorizer.class.name = 
+kafka          | 	auto.create.topics.enable = true
+kafka          | 	auto.include.jmx.reporter = true
+kafka          | 	auto.leader.rebalance.enable = true
+kafka          | 	background.threads = 10
+kafka          | 	broker.heartbeat.interval.ms = 2000
+kafka          | 	broker.id = 1
+kafka          | 	broker.id.generation.enable = true
+kafka          | 	broker.rack = null
+kafka          | 	broker.session.timeout.ms = 9000
+kafka          | 	client.quota.callback.class = null
+kafka          | 	compression.type = producer
+kafka          | 	connection.failed.authentication.delay.ms = 100
+kafka          | 	connections.max.idle.ms = 600000
+kafka          | 	connections.max.reauth.ms = 0
+kafka          | 	control.plane.listener.name = null
+kafka          | 	controlled.shutdown.enable = true
+kafka          | 	controlled.shutdown.max.retries = 3
+kafka          | 	controlled.shutdown.retry.backoff.ms = 5000
+kafka          | 	controller.listener.names = null
+kafka          | 	controller.quorum.append.linger.ms = 25
+kafka          | 	controller.quorum.election.backoff.max.ms = 1000
+kafka          | 	controller.quorum.election.timeout.ms = 1000
+kafka          | 	controller.quorum.fetch.timeout.ms = 2000
+kafka          | 	controller.quorum.request.timeout.ms = 2000
+kafka          | 	controller.quorum.retry.backoff.ms = 20
+kafka          | 	controller.quorum.voters = []
+kafka          | 	controller.quota.window.num = 11
+kafka          | 	controller.quota.window.size.seconds = 1
+kafka          | 	controller.socket.timeout.ms = 30000
+kafka          | 	create.topic.policy.class.name = null
+kafka          | 	default.replication.factor = 1
+kafka          | 	delegation.token.expiry.check.interval.ms = 3600000
+kafka          | 	delegation.token.expiry.time.ms = 86400000
+kafka          | 	delegation.token.master.key = null
+kafka          | 	delegation.token.max.lifetime.ms = 604800000
+kafka          | 	delegation.token.secret.key = null
+kafka          | 	delete.records.purgatory.purge.interval.requests = 1
+kafka          | 	delete.topic.enable = true
+kafka          | 	early.start.listeners = null
+kafka          | 	fetch.max.bytes = 57671680
+kafka          | 	fetch.purgatory.purge.interval.requests = 1000
+kafka          | 	group.consumer.assignors = []
+kafka          | 	group.consumer.heartbeat.interval.ms = 5000
+kafka          | 	group.consumer.max.heartbeat.interval.ms = 15000
+kafka          | 	group.consumer.max.session.timeout.ms = 60000
+kafka          | 	group.consumer.max.size = 2147483647
+kafka          | 	group.consumer.min.heartbeat.interval.ms = 5000
+kafka          | 	group.consumer.min.session.timeout.ms = 45000
+kafka          | 	group.consumer.session.timeout.ms = 45000
+kafka          | 	group.coordinator.new.enable = false
+kafka          | 	group.coordinator.threads = 1
+kafka          | 	group.initial.rebalance.delay.ms = 3000
+kafka          | 	group.max.session.timeout.ms = 1800000
+kafka          | 	group.max.size = 2147483647
+kafka          | 	group.min.session.timeout.ms = 6000
+kafka          | 	initial.broker.registration.timeout.ms = 60000
+kafka          | 	inter.broker.listener.name = null
+kafka          | 	inter.broker.protocol.version = 3.5-IV2
+kafka          | 	kafka.metrics.polling.interval.secs = 10
+kafka          | 	kafka.metrics.reporters = []
+kafka          | 	leader.imbalance.check.interval.seconds = 300
+kafka          | 	leader.imbalance.per.broker.percentage = 10
+kafka          | 	listener.security.protocol.map = PLAINTEXT:PLAINTEXT,SSL:SSL,SASL_PLAINTEXT:SASL_PLAINTEXT,SASL_SSL:SASL_SSL
+kafka          | 	listeners = PLAINTEXT://0.0.0.0:9092
+kafka          | 	log.cleaner.backoff.ms = 15000
+kafka          | 	log.cleaner.dedupe.buffer.size = 134217728
+kafka          | 	log.cleaner.delete.retention.ms = 86400000
+kafka          | 	log.cleaner.enable = true
+kafka          | 	log.cleaner.io.buffer.load.factor = 0.9
+kafka          | 	log.cleaner.io.buffer.size = 524288
+kafka          | 	log.cleaner.io.max.bytes.per.second = 1.7976931348623157E308
+kafka          | 	log.cleaner.max.compaction.lag.ms = 9223372036854775807
+kafka          | 	log.cleaner.min.cleanable.ratio = 0.5
+kafka          | 	log.cleaner.min.compaction.lag.ms = 0
+kafka          | 	log.cleaner.threads = 1
+kafka          | 	log.cleanup.policy = [delete]
+kafka          | 	log.dir = /tmp/kafka-logs
+kafka          | 	log.dirs = /var/lib/kafka/data
+kafka          | 	log.flush.interval.messages = 9223372036854775807
+kafka          | 	log.flush.interval.ms = null
+kafka          | 	log.flush.offset.checkpoint.interval.ms = 60000
+kafka          | 	log.flush.scheduler.interval.ms = 9223372036854775807
+kafka          | 	log.flush.start.offset.checkpoint.interval.ms = 60000
+kafka          | 	log.index.interval.bytes = 4096
+kafka          | 	log.index.size.max.bytes = 10485760
+kafka          | 	log.message.downconversion.enable = true
+kafka          | 	log.message.format.version = 3.0-IV1
+kafka          | 	log.message.timestamp.difference.max.ms = 9223372036854775807
+kafka          | 	log.message.timestamp.type = CreateTime
+kafka          | 	log.preallocate = false
+kafka          | 	log.retention.bytes = -1
+kafka          | 	log.retention.check.interval.ms = 300000
+kafka          | 	log.retention.hours = 168
+kafka          | 	log.retention.minutes = null
+kafka          | 	log.retention.ms = null
+kafka          | 	log.roll.hours = 168
+kafka          | 	log.roll.jitter.hours = 0
+kafka          | 	log.roll.jitter.ms = null
+kafka          | 	log.roll.ms = null
+kafka          | 	log.segment.bytes = 1073741824
+kafka          | 	log.segment.delete.delay.ms = 60000
+kafka          | 	max.connection.creation.rate = 2147483647
+kafka          | 	max.connections = 2147483647
+kafka          | 	max.connections.per.ip = 2147483647
+kafka          | 	max.connections.per.ip.overrides = 
+kafka          | 	max.incremental.fetch.session.cache.slots = 1000
+kafka          | 	message.max.bytes = 1048588
+kafka          | 	metadata.log.dir = null
+kafka          | 	metadata.log.max.record.bytes.between.snapshots = 20971520
+kafka          | 	metadata.log.max.snapshot.interval.ms = 3600000
+kafka          | 	metadata.log.segment.bytes = 1073741824
+kafka          | 	metadata.log.segment.min.bytes = 8388608
+kafka          | 	metadata.log.segment.ms = 604800000
+kafka          | 	metadata.max.idle.interval.ms = 500
+kafka          | 	metadata.max.retention.bytes = 104857600
+kafka          | 	metadata.max.retention.ms = 604800000
+kafka          | 	metric.reporters = []
+kafka          | 	metrics.num.samples = 2
+kafka          | 	metrics.recording.level = INFO
+kafka          | 	metrics.sample.window.ms = 30000
+kafka          | 	min.insync.replicas = 1
+kafka          | 	node.id = 1
+kafka          | 	num.io.threads = 8
+kafka          | 	num.network.threads = 3
+kafka          | 	num.partitions = 1
+kafka          | 	num.recovery.threads.per.data.dir = 1
+kafka          | 	num.replica.alter.log.dirs.threads = null
+kafka          | 	num.replica.fetchers = 1
+kafka          | 	offset.metadata.max.bytes = 4096
+kafka          | 	offsets.commit.required.acks = -1
+kafka          | 	offsets.commit.timeout.ms = 5000
+kafka          | 	offsets.load.buffer.size = 5242880
+kafka          | 	offsets.retention.check.interval.ms = 600000
+kafka          | 	offsets.retention.minutes = 10080
+kafka          | 	offsets.topic.compression.codec = 0
+kafka          | 	offsets.topic.num.partitions = 50
+kafka          | 	offsets.topic.replication.factor = 1
+kafka          | 	offsets.topic.segment.bytes = 104857600
+kafka          | 	password.encoder.cipher.algorithm = AES/CBC/PKCS5Padding
+kafka          | 	password.encoder.iterations = 4096
+kafka          | 	password.encoder.key.length = 128
+kafka          | 	password.encoder.keyfactory.algorithm = null
+kafka          | 	password.encoder.old.secret = null
+kafka          | 	password.encoder.secret = null
+kafka          | 	principal.builder.class = class org.apache.kafka.common.security.authenticator.DefaultKafkaPrincipalBuilder
+kafka          | 	process.roles = []
+kafka          | 	producer.id.expiration.check.interval.ms = 600000
+kafka          | 	producer.id.expiration.ms = 86400000
+kafka          | 	producer.purgatory.purge.interval.requests = 1000
+kafka          | 	queued.max.request.bytes = -1
+kafka          | 	queued.max.requests = 500
+kafka          | 	quota.window.num = 11
+kafka          | 	quota.window.size.seconds = 1
+kafka          | 	remote.log.index.file.cache.total.size.bytes = 1073741824
+kafka          | 	remote.log.manager.task.interval.ms = 30000
+kafka          | 	remote.log.manager.task.retry.backoff.max.ms = 30000
+kafka          | 	remote.log.manager.task.retry.backoff.ms = 500
+kafka          | 	remote.log.manager.task.retry.jitter = 0.2
+kafka          | 	remote.log.manager.thread.pool.size = 10
+kafka          | 	remote.log.metadata.manager.class.name = null
+kafka          | 	remote.log.metadata.manager.class.path = null
+kafka          | 	remote.log.metadata.manager.impl.prefix = null
+kafka          | 	remote.log.metadata.manager.listener.name = null
+kafka          | 	remote.log.reader.max.pending.tasks = 100
+kafka          | 	remote.log.reader.threads = 10
+kafka          | 	remote.log.storage.manager.class.name = null
+kafka          | 	remote.log.storage.manager.class.path = null
+kafka          | 	remote.log.storage.manager.impl.prefix = null
+kafka          | 	remote.log.storage.system.enable = false
+kafka          | 	replica.fetch.backoff.ms = 1000
+kafka          | 	replica.fetch.max.bytes = 1048576
+kafka          | 	replica.fetch.min.bytes = 1
+kafka          | 	replica.fetch.response.max.bytes = 10485760
+kafka          | 	replica.fetch.wait.max.ms = 500
+kafka          | 	replica.high.watermark.checkpoint.interval.ms = 5000
+kafka          | 	replica.lag.time.max.ms = 30000
+kafka          | 	replica.selector.class = null
+kafka          | 	replica.socket.receive.buffer.bytes = 65536
+kafka          | 	replica.socket.timeout.ms = 30000
+kafka          | 	replication.quota.window.num = 11
+kafka          | 	replication.quota.window.size.seconds = 1
+kafka          | 	request.timeout.ms = 30000
+kafka          | 	reserved.broker.max.id = 1000
+kafka          | 	sasl.client.callback.handler.class = null
+kafka          | 	sasl.enabled.mechanisms = [GSSAPI]
+kafka          | 	sasl.jaas.config = null
+kafka          | 	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+kafka          | 	sasl.kerberos.min.time.before.relogin = 60000
+kafka          | 	sasl.kerberos.principal.to.local.rules = [DEFAULT]
+kafka          | 	sasl.kerberos.service.name = null
+kafka          | 	sasl.kerberos.ticket.renew.jitter = 0.05
+kafka          | 	sasl.kerberos.ticket.renew.window.factor = 0.8
+kafka          | 	sasl.login.callback.handler.class = null
+kafka          | 	sasl.login.class = null
+kafka          | 	sasl.login.connect.timeout.ms = null
+kafka          | 	sasl.login.read.timeout.ms = null
+kafka          | 	sasl.login.refresh.buffer.seconds = 300
+kafka          | 	sasl.login.refresh.min.period.seconds = 60
+kafka          | 	sasl.login.refresh.window.factor = 0.8
+kafka          | 	sasl.login.refresh.window.jitter = 0.05
+kafka          | 	sasl.login.retry.backoff.max.ms = 10000
+kafka          | 	sasl.login.retry.backoff.ms = 100
+kafka          | 	sasl.mechanism.controller.protocol = GSSAPI
+kafka          | 	sasl.mechanism.inter.broker.protocol = GSSAPI
+kafka          | 	sasl.oauthbearer.clock.skew.seconds = 30
+kafka          | 	sasl.oauthbearer.expected.audience = null
+kafka          | 	sasl.oauthbearer.expected.issuer = null
+kafka          | 	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+kafka          | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+kafka          | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+kafka          | 	sasl.oauthbearer.jwks.endpoint.url = null
+kafka          | 	sasl.oauthbearer.scope.claim.name = scope
+kafka          | 	sasl.oauthbearer.sub.claim.name = sub
+kafka          | 	sasl.oauthbearer.token.endpoint.url = null
+kafka          | 	sasl.server.callback.handler.class = null
+kafka          | 	sasl.server.max.receive.size = 524288
+kafka          | 	security.inter.broker.protocol = PLAINTEXT
+kafka          | 	security.providers = null
+kafka          | 	server.max.startup.time.ms = 9223372036854775807
+kafka          | 	socket.connection.setup.timeout.max.ms = 30000
+kafka          | 	socket.connection.setup.timeout.ms = 10000
+kafka          | 	socket.listen.backlog.size = 50
+kafka          | 	socket.receive.buffer.bytes = 102400
+kafka          | 	socket.request.max.bytes = 104857600
+kafka          | 	socket.send.buffer.bytes = 102400
+kafka          | 	ssl.cipher.suites = []
+kafka          | 	ssl.client.auth = none
+kafka          | 	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+kafka          | 	ssl.endpoint.identification.algorithm = https
+kafka          | 	ssl.engine.factory.class = null
+kafka          | 	ssl.key.password = null
+kafka          | 	ssl.keymanager.algorithm = SunX509
+kafka          | 	ssl.keystore.certificate.chain = null
+kafka          | 	ssl.keystore.key = null
+kafka          | 	ssl.keystore.location = null
+kafka          | 	ssl.keystore.password = null
+kafka          | 	ssl.keystore.type = JKS
+kafka          | 	ssl.principal.mapping.rules = DEFAULT
+kafka          | 	ssl.protocol = TLSv1.3
+kafka          | 	ssl.provider = null
+kafka          | 	ssl.secure.random.implementation = null
+kafka          | 	ssl.trustmanager.algorithm = PKIX
+kafka          | 	ssl.truststore.certificates = null
+kafka          | 	ssl.truststore.location = null
+kafka          | 	ssl.truststore.password = null
+kafka          | 	ssl.truststore.type = JKS
+kafka          | 	transaction.abort.timed.out.transaction.cleanup.interval.ms = 10000
+kafka          | 	transaction.max.timeout.ms = 900000
+kafka          | 	transaction.remove.expired.transaction.cleanup.interval.ms = 3600000
+kafka          | 	transaction.state.log.load.buffer.size = 5242880
+kafka          | 	transaction.state.log.min.isr = 2
+kafka          | 	transaction.state.log.num.partitions = 50
+kafka          | 	transaction.state.log.replication.factor = 3
+kafka          | 	transaction.state.log.segment.bytes = 104857600
+kafka          | 	transactional.id.expiration.ms = 604800000
+kafka          | 	unclean.leader.election.enable = false
+kafka          | 	unstable.api.versions.enable = false
+kafka          | 	zookeeper.clientCnxnSocket = null
+kafka          | 	zookeeper.connect = zookeeper:2181
+kafka          | 	zookeeper.connection.timeout.ms = null
+kafka          | 	zookeeper.max.in.flight.requests = 10
+kafka          | 	zookeeper.metadata.migration.enable = false
+kafka          | 	zookeeper.session.timeout.ms = 18000
+kafka          | 	zookeeper.set.acl = false
+kafka          | 	zookeeper.ssl.cipher.suites = null
+kafka          | 	zookeeper.ssl.client.enable = false
+kafka          | 	zookeeper.ssl.crl.enable = false
+kafka          | 	zookeeper.ssl.enabled.protocols = null
+kafka          | 	zookeeper.ssl.endpoint.identification.algorithm = HTTPS
+kafka          | 	zookeeper.ssl.keystore.location = null
+kafka          | 	zookeeper.ssl.keystore.password = null
+kafka          | 	zookeeper.ssl.keystore.type = null
+kafka          | 	zookeeper.ssl.ocsp.enable = false
+kafka          | 	zookeeper.ssl.protocol = TLSv1.2
+kafka          | 	zookeeper.ssl.truststore.location = null
+kafka          | 	zookeeper.ssl.truststore.password = null
+kafka          | 	zookeeper.ssl.truststore.type = null
+kafka          |  (kafka.server.KafkaConfig)
+kafka          | [2024-12-15 18:22:05,170] INFO [ThrottledChannelReaper-Fetch]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+kafka          | [2024-12-15 18:22:05,172] INFO [ThrottledChannelReaper-Produce]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+taskmanager-1  | 2024-12-15 18:22:05,174 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Trying to connect to address jobmanager/172.23.0.4:6123
+kafka          | [2024-12-15 18:22:05,175] INFO [ThrottledChannelReaper-Request]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+taskmanager-1  | 2024-12-15 18:22:05,176 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [abc0a3b603ca/172.23.0.5] with timeout [200] due to: Connection refused (Connection refused)
+taskmanager-1  | 2024-12-15 18:22:05,177 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [/172.23.0.5] with timeout [50] due to: Connection refused (Connection refused)
+taskmanager-1  | 2024-12-15 18:22:05,178 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [/172.23.0.5] with timeout [50] due to: Connection refused (Connection refused)
+taskmanager-1  | 2024-12-15 18:22:05,179 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [/0:0:0:0:0:0:0:1%lo] with timeout [50] due to: Network is unreachable (connect failed)
+kafka          | [2024-12-15 18:22:05,179] INFO [ThrottledChannelReaper-ControllerMutation]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+taskmanager-1  | 2024-12-15 18:22:05,179 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [/127.0.0.1] with timeout [50] due to: Invalid argument (connect failed)
+taskmanager-1  | 2024-12-15 18:22:05,180 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [/172.23.0.5] with timeout [1000] due to: Connection refused (Connection refused)
+taskmanager-1  | 2024-12-15 18:22:05,181 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [/0:0:0:0:0:0:0:1%lo] with timeout [1000] due to: Network is unreachable (connect failed)
+taskmanager-1  | 2024-12-15 18:22:05,182 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [/127.0.0.1] with timeout [1000] due to: Invalid argument (connect failed)
+kafka          | [2024-12-15 18:22:05,223] INFO Loading logs from log dirs ArraySeq(/var/lib/kafka/data) (kafka.log.LogManager)
+kafka          | [2024-12-15 18:22:05,228] INFO No logs found to be loaded in /var/lib/kafka/data (kafka.log.LogManager)
+kafka          | [2024-12-15 18:22:05,241] INFO Loaded 0 logs in 16ms (kafka.log.LogManager)
+kafka          | [2024-12-15 18:22:05,243] INFO Starting log cleanup with a period of 300000 ms. (kafka.log.LogManager)
+kafka          | [2024-12-15 18:22:05,246] INFO Starting log flusher with a default period of 9223372036854775807 ms. (kafka.log.LogManager)
+kafka          | [2024-12-15 18:22:05,266] INFO Starting the log cleaner (kafka.log.LogCleaner)
+taskmanager-1  | 2024-12-15 18:22:05,283 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Trying to connect to address jobmanager/172.23.0.4:6123
+taskmanager-1  | 2024-12-15 18:22:05,284 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [abc0a3b603ca/172.23.0.5] with timeout [200] due to: Connection refused (Connection refused)
+taskmanager-1  | 2024-12-15 18:22:05,285 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [/172.23.0.5] with timeout [50] due to: Connection refused (Connection refused)
+taskmanager-1  | 2024-12-15 18:22:05,287 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [/172.23.0.5] with timeout [50] due to: Connection refused (Connection refused)
+taskmanager-1  | 2024-12-15 18:22:05,287 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [/0:0:0:0:0:0:0:1%lo] with timeout [50] due to: Network is unreachable (connect failed)
+taskmanager-1  | 2024-12-15 18:22:05,288 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [/127.0.0.1] with timeout [50] due to: Invalid argument (connect failed)
+taskmanager-1  | 2024-12-15 18:22:05,290 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [/172.23.0.5] with timeout [1000] due to: Connection refused (Connection refused)
+taskmanager-1  | 2024-12-15 18:22:05,290 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [/0:0:0:0:0:0:0:1%lo] with timeout [1000] due to: Network is unreachable (connect failed)
+taskmanager-1  | 2024-12-15 18:22:05,291 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [/127.0.0.1] with timeout [1000] due to: Invalid argument (connect failed)
+kafka          | [2024-12-15 18:22:05,370] INFO [kafka-log-cleaner-thread-0]: Starting (kafka.log.LogCleaner$CleanerThread)
+kafka          | [2024-12-15 18:22:05,395] INFO [feature-zk-node-event-process-thread]: Starting (kafka.server.FinalizedFeatureChangeListener$ChangeNotificationProcessorThread)
+kafka          | [2024-12-15 18:22:05,440] INFO Feature ZK node at path: /feature does not exist (kafka.server.FinalizedFeatureChangeListener)
+jobmanager     | 2024-12-15 18:22:05,443 INFO  org.apache.pekko.event.slf4j.Slf4jLogger                     [] - Slf4jLogger started
+kafka          | [2024-12-15 18:22:05,476] INFO [zk-broker-1-to-controller-forwarding-channel-manager]: Starting (kafka.server.BrokerToControllerRequestThread)
+taskmanager-1  | 2024-12-15 18:22:05,492 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Trying to connect to address jobmanager/172.23.0.4:6123
+taskmanager-1  | 2024-12-15 18:22:05,493 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [abc0a3b603ca/172.23.0.5] with timeout [200] due to: Connection refused (Connection refused)
+taskmanager-1  | 2024-12-15 18:22:05,495 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [/172.23.0.5] with timeout [50] due to: Connection refused (Connection refused)
+jobmanager     | 2024-12-15 18:22:05,496 INFO  org.apache.pekko.remote.RemoteActorRefProvider               [] - Pekko Cluster not in use - enabling unsafe features anyway because `pekko.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+taskmanager-1  | 2024-12-15 18:22:05,496 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [/172.23.0.5] with timeout [50] due to: Connection refused (Connection refused)
+jobmanager     | 2024-12-15 18:22:05,497 INFO  org.apache.pekko.remote.Remoting                             [] - Starting remoting
+taskmanager-1  | 2024-12-15 18:22:05,498 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [/0:0:0:0:0:0:0:1%lo] with timeout [50] due to: Network is unreachable (connect failed)
+taskmanager-1  | 2024-12-15 18:22:05,499 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [/127.0.0.1] with timeout [50] due to: Invalid argument (connect failed)
+taskmanager-1  | 2024-12-15 18:22:05,501 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [/172.23.0.5] with timeout [1000] due to: Connection refused (Connection refused)
+taskmanager-1  | 2024-12-15 18:22:05,502 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [/0:0:0:0:0:0:0:1%lo] with timeout [1000] due to: Network is unreachable (connect failed)
+taskmanager-1  | 2024-12-15 18:22:05,503 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Failed to connect to [jobmanager/172.23.0.4:6123] from local address [/127.0.0.1] with timeout [1000] due to: Invalid argument (connect failed)
+jobmanager     | 2024-12-15 18:22:05,750 INFO  org.apache.pekko.remote.Remoting                             [] - Remoting started; listening on addresses :[pekko.tcp://flink@jobmanager:6123]
+taskmanager-1  | 2024-12-15 18:22:05,904 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Trying to connect to address jobmanager/172.23.0.4:6123
+taskmanager-1  | 2024-12-15 18:22:05,906 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - TaskManager will use hostname/address 'abc0a3b603ca' (172.23.0.5) for communication.
+taskmanager-1  | 2024-12-15 18:22:05,996 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Trying to start actor system, external address 172.23.0.5:0, bind address 0.0.0.0:0.
+jobmanager     | 2024-12-15 18:22:06,049 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Actor system started at pekko.tcp://flink@jobmanager:6123
+jobmanager     | 2024-12-15 18:22:06,094 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Loading delegation token providers
+jobmanager     | 2024-12-15 18:22:06,103 INFO  org.apache.flink.runtime.security.token.hadoop.HadoopFSDelegationTokenProvider [] - Hadoop FS is not available (not packaged with this application): NoClassDefFoundError : "org/apache/hadoop/conf/Configuration".
+jobmanager     | 2024-12-15 18:22:06,104 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token provider hadoopfs loaded and initialized
+jobmanager     | 2024-12-15 18:22:06,108 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token provider hbase loaded and initialized
+jobmanager     | 2024-12-15 18:22:06,108 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+jobmanager     | 2024-12-15 18:22:06,109 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+jobmanager     | 2024-12-15 18:22:06,110 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+jobmanager     | 2024-12-15 18:22:06,110 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+jobmanager     | 2024-12-15 18:22:06,111 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+jobmanager     | 2024-12-15 18:22:06,111 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+jobmanager     | 2024-12-15 18:22:06,112 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+jobmanager     | 2024-12-15 18:22:06,112 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+jobmanager     | 2024-12-15 18:22:06,113 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token providers loaded successfully
+jobmanager     | 2024-12-15 18:22:06,115 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Loading delegation token receivers
+jobmanager     | 2024-12-15 18:22:06,121 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hadoopfs loaded and initialized
+jobmanager     | 2024-12-15 18:22:06,123 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hbase loaded and initialized
+jobmanager     | 2024-12-15 18:22:06,124 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+jobmanager     | 2024-12-15 18:22:06,125 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+jobmanager     | 2024-12-15 18:22:06,126 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+jobmanager     | 2024-12-15 18:22:06,126 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+jobmanager     | 2024-12-15 18:22:06,126 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+jobmanager     | 2024-12-15 18:22:06,130 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+jobmanager     | 2024-12-15 18:22:06,133 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+jobmanager     | 2024-12-15 18:22:06,134 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+jobmanager     | 2024-12-15 18:22:06,136 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receivers loaded successfully
+jobmanager     | 2024-12-15 18:22:06,137 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Checking provider and receiver instances consistency
+jobmanager     | 2024-12-15 18:22:06,140 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Provider and receiver instances are consistent
+jobmanager     | 2024-12-15 18:22:06,143 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Obtaining delegation tokens
+jobmanager     | 2024-12-15 18:22:06,149 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation tokens obtained successfully
+jobmanager     | 2024-12-15 18:22:06,150 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - No tokens obtained so skipping notifications
+kafka          | [2024-12-15 18:22:06,166] INFO Updated connection-accept-rate max connection creation rate to 2147483647 (kafka.network.ConnectionQuotas)
+jobmanager     | 2024-12-15 18:22:06,186 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Created BLOB server storage directory /tmp/jm_7f28177dbb21efecfd020abea7bcb551/blobStorage
+jobmanager     | 2024-12-15 18:22:06,195 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Started BLOB server at 0.0.0.0:6124 - max concurrent requests: 50 - max backlog: 1000
+kafka          | [2024-12-15 18:22:06,223] INFO [SocketServer listenerType=ZK_BROKER, nodeId=1] Created data-plane acceptor and processors for endpoint : ListenerName(PLAINTEXT) (kafka.network.SocketServer)
+kafka          | [2024-12-15 18:22:06,235] INFO [zk-broker-1-to-controller-alter-partition-channel-manager]: Starting (kafka.server.BrokerToControllerRequestThread)
+jobmanager     | 2024-12-15 18:22:06,237 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - No metrics reporter configured, no metrics will be exposed/reported.
+jobmanager     | 2024-12-15 18:22:06,238 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - No trace reporter configured, no metrics will be exposed/reported.
+jobmanager     | 2024-12-15 18:22:06,245 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Trying to start actor system, external address jobmanager:0, bind address 0.0.0.0:0.
+kafka          | [2024-12-15 18:22:06,298] INFO [ExpirationReaper-1-Produce]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+kafka          | [2024-12-15 18:22:06,301] INFO [ExpirationReaper-1-Fetch]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+kafka          | [2024-12-15 18:22:06,308] INFO [ExpirationReaper-1-DeleteRecords]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+kafka          | [2024-12-15 18:22:06,317] INFO [ExpirationReaper-1-ElectLeader]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+jobmanager     | 2024-12-15 18:22:06,337 INFO  org.apache.pekko.event.slf4j.Slf4jLogger                     [] - Slf4jLogger started
+jobmanager     | 2024-12-15 18:22:06,348 INFO  org.apache.pekko.remote.RemoteActorRefProvider               [] - Pekko Cluster not in use - enabling unsafe features anyway because `pekko.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+jobmanager     | 2024-12-15 18:22:06,349 INFO  org.apache.pekko.remote.Remoting                             [] - Starting remoting
+kafka          | [2024-12-15 18:22:06,353] INFO [LogDirFailureHandler]: Starting (kafka.server.ReplicaManager$LogDirFailureHandler)
+jobmanager     | 2024-12-15 18:22:06,420 INFO  org.apache.pekko.remote.Remoting                             [] - Remoting started; listening on addresses :[pekko.tcp://flink-metrics@jobmanager:36173]
+kafka          | [2024-12-15 18:22:06,434] INFO Creating /brokers/ids/1 (is it secure? false) (kafka.zk.KafkaZkClient)
+jobmanager     | 2024-12-15 18:22:06,449 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Actor system started at pekko.tcp://flink-metrics@jobmanager:36173
+jobmanager     | 2024-12-15 18:22:06,491 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at pekko://flink-metrics/user/rpc/MetricQueryService .
+kafka          | [2024-12-15 18:22:06,503] INFO Stat of the created znode at /brokers/ids/1 is: 27,27,1734286926466,1734286926466,1,0,0,72060817559191553,194,0,27
+kafka          |  (kafka.zk.KafkaZkClient)
+kafka          | [2024-12-15 18:22:06,507] INFO Registered broker 1 at path /brokers/ids/1 with addresses: PLAINTEXT://kafka:9092, czxid (broker epoch): 27 (kafka.zk.KafkaZkClient)
+jobmanager     | 2024-12-15 18:22:06,616 INFO  org.apache.flink.runtime.dispatcher.FileExecutionGraphInfoStore [] - Initializing FileExecutionGraphInfoStore: Storage directory /tmp/executionGraphStore-8f688fd9-a66e-4ec0-87d2-74e8487c4bc9, expiration time 3600000, maximum cache size 52428800 bytes.
+kafka          | [2024-12-15 18:22:06,689] INFO [ControllerEventThread controllerId=1] Starting (kafka.controller.ControllerEventManager$ControllerEventThread)
+kafka          | [2024-12-15 18:22:06,703] INFO [ExpirationReaper-1-topic]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+kafka          | [2024-12-15 18:22:06,724] INFO [ExpirationReaper-1-Heartbeat]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+kafka          | [2024-12-15 18:22:06,728] INFO [ExpirationReaper-1-Rebalance]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+kafka          | [2024-12-15 18:22:06,734] INFO Successfully created /controller_epoch with initial epoch 0 (kafka.zk.KafkaZkClient)
+kafka          | [2024-12-15 18:22:06,758] INFO [Controller id=1] 1 successfully elected as the controller. Epoch incremented to 1 and epoch zk version is now 1 (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:06,758] INFO [GroupCoordinator 1]: Starting up. (kafka.coordinator.group.GroupCoordinator)
+kafka          | [2024-12-15 18:22:06,770] INFO [Controller id=1] Creating FeatureZNode at path: /feature with contents: FeatureZNode(2,Enabled,Map()) (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:06,772] INFO [GroupCoordinator 1]: Startup complete. (kafka.coordinator.group.GroupCoordinator)
+kafka          | [2024-12-15 18:22:06,782] INFO Feature ZK node created at path: /feature (kafka.server.FinalizedFeatureChangeListener)
+jobmanager     | 2024-12-15 18:22:06,799 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Upload directory /tmp/flink-web-634d3c77-e93d-49c3-aff7-fdb96fa4b134/flink-web-upload does not exist. 
+jobmanager     | 2024-12-15 18:22:06,802 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Created directory /tmp/flink-web-634d3c77-e93d-49c3-aff7-fdb96fa4b134/flink-web-upload for file uploads.
+jobmanager     | 2024-12-15 18:22:06,806 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Starting rest endpoint.
+kafka          | [2024-12-15 18:22:06,809] INFO [TransactionCoordinator id=1] Starting up. (kafka.coordinator.transaction.TransactionCoordinator)
+kafka          | [2024-12-15 18:22:06,817] INFO [TxnMarkerSenderThread-1]: Starting (kafka.coordinator.transaction.TransactionMarkerChannelManager)
+kafka          | [2024-12-15 18:22:06,817] INFO [TransactionCoordinator id=1] Startup complete. (kafka.coordinator.transaction.TransactionCoordinator)
+kafka          | [2024-12-15 18:22:06,842] INFO [Controller id=1] Registering handlers (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:06,842] INFO [MetadataCache brokerId=1] Updated cache from existing <empty> to latest FinalizedFeaturesAndEpoch(features=Map(), epoch=0). (kafka.server.metadata.ZkMetadataCache)
+kafka          | [2024-12-15 18:22:06,855] INFO [Controller id=1] Deleting log dir event notifications (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:06,864] INFO [Controller id=1] Deleting isr change notifications (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:06,873] INFO [Controller id=1] Initializing controller context (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:06,892] INFO [ExpirationReaper-1-AlterAcls]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+kafka          | [2024-12-15 18:22:06,915] INFO [Controller id=1] Initialized broker epochs cache: HashMap(1 -> 27) (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:06,929] DEBUG [Controller id=1] Register BrokerModifications handler for Set(1) (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:06,943] DEBUG [Channel manager on controller 1]: Controller 1 trying to connect to broker 1 (kafka.controller.ControllerChannelManager)
+kafka          | [2024-12-15 18:22:06,969] INFO [/config/changes-event-process-thread]: Starting (kafka.common.ZkNodeChangeNotificationListener$ChangeEventProcessThread)
+kafka          | [2024-12-15 18:22:06,971] INFO [RequestSendThread controllerId=1] Starting (kafka.controller.RequestSendThread)
+kafka          | [2024-12-15 18:22:06,974] INFO [Controller id=1] Currently active brokers in the cluster: Set(1) (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:06,976] INFO [Controller id=1] Currently shutting brokers in the cluster: HashSet() (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:06,977] INFO [Controller id=1] Current list of topics in the cluster: HashSet() (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:06,978] INFO [Controller id=1] Fetching topic deletions in progress (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:06,985] INFO [Controller id=1] List of topics to be deleted:  (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:06,986] INFO [Controller id=1] List of topics ineligible for deletion:  (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:06,988] INFO [Controller id=1] Initializing topic deletion manager (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:06,989] INFO [Topic Deletion Manager 1] Initializing manager with initial deletions: Set(), initial ineligible deletions: HashSet() (kafka.controller.TopicDeletionManager)
+kafka          | [2024-12-15 18:22:06,991] INFO [Controller id=1] Sending update metadata request (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:07,000] INFO [Controller id=1 epoch=1] Sending UpdateMetadata request to brokers HashSet(1) for 0 partitions (state.change.logger)
+kafka          | [2024-12-15 18:22:07,002] INFO [SocketServer listenerType=ZK_BROKER, nodeId=1] Enabling request processing. (kafka.network.SocketServer)
+kafka          | [2024-12-15 18:22:07,009] INFO Awaiting socket connections on 0.0.0.0:9092. (kafka.network.DataPlaneAcceptor)
+kafka          | [2024-12-15 18:22:07,017] INFO [ReplicaStateMachine controllerId=1] Initializing replica state (kafka.controller.ZkReplicaStateMachine)
+kafka          | [2024-12-15 18:22:07,022] INFO [ReplicaStateMachine controllerId=1] Triggering online replica state changes (kafka.controller.ZkReplicaStateMachine)
+kafka          | [2024-12-15 18:22:07,030] INFO Kafka version: 7.5.0-ccs (org.apache.kafka.common.utils.AppInfoParser)
+kafka          | [2024-12-15 18:22:07,031] INFO Kafka commitId: ff3c201baa948d97889dc26c99d7cdc23d038f2e (org.apache.kafka.common.utils.AppInfoParser)
+kafka          | [2024-12-15 18:22:07,031] INFO Kafka startTimeMs: 1734286927017 (org.apache.kafka.common.utils.AppInfoParser)
+kafka          | [2024-12-15 18:22:07,032] INFO [ReplicaStateMachine controllerId=1] Triggering offline replica state changes (kafka.controller.ZkReplicaStateMachine)
+kafka          | [2024-12-15 18:22:07,033] DEBUG [ReplicaStateMachine controllerId=1] Started replica state machine with initial state -> HashMap() (kafka.controller.ZkReplicaStateMachine)
+kafka          | [2024-12-15 18:22:07,035] INFO [KafkaServer id=1] started (kafka.server.KafkaServer)
+kafka          | [2024-12-15 18:22:07,035] INFO [PartitionStateMachine controllerId=1] Initializing partition state (kafka.controller.ZkPartitionStateMachine)
+kafka          | [2024-12-15 18:22:07,037] INFO [PartitionStateMachine controllerId=1] Triggering online partition state changes (kafka.controller.ZkPartitionStateMachine)
+kafka          | [2024-12-15 18:22:07,046] INFO [RequestSendThread controllerId=1] Controller 1 connected to kafka:9092 (id: 1 rack: null) for sending state change requests (kafka.controller.RequestSendThread)
+kafka          | [2024-12-15 18:22:07,049] DEBUG [PartitionStateMachine controllerId=1] Started partition state machine with initial state -> HashMap() (kafka.controller.ZkPartitionStateMachine)
+kafka          | [2024-12-15 18:22:07,050] INFO [Controller id=1] Ready to serve as the new controller with epoch 1 (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:07,065] INFO [Controller id=1] Partitions undergoing preferred replica election:  (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:07,066] INFO [Controller id=1] Partitions that completed preferred replica election:  (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:07,067] INFO [Controller id=1] Skipping preferred replica election for partitions due to topic deletion:  (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:07,068] INFO [Controller id=1] Resuming preferred replica election for partitions:  (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:07,070] INFO [Controller id=1] Starting replica leader election (PREFERRED) for partitions  triggered by ZkTriggered (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:07,102] INFO [Controller id=1] Starting the controller scheduler (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:06,093] INFO [zk-broker-1-to-controller-alter-partition-channel-manager]: Recorded new controller, from now on will use node kafka:9092 (id: 1 rack: null) (kafka.server.BrokerToControllerRequestThread)
+kafka          | [2024-12-15 18:22:06,108] TRACE [Controller id=1 epoch=1] Received response UpdateMetadataResponseData(errorCode=0) for request UPDATE_METADATA with correlation id 0 sent to broker kafka:9092 (id: 1 rack: null) (state.change.logger)
+kafka          | [2024-12-15 18:22:06,145] INFO [zk-broker-1-to-controller-forwarding-channel-manager]: Recorded new controller, from now on will use node kafka:9092 (id: 1 rack: null) (kafka.server.BrokerToControllerRequestThread)
+taskmanager-1  | 2024-12-15 18:22:06,232 INFO  org.apache.pekko.event.slf4j.Slf4jLogger                     [] - Slf4jLogger started
+jobmanager     | 2024-12-15 18:22:06,273 INFO  org.apache.flink.runtime.webmonitor.WebMonitorUtils          [] - Determined location of main cluster component log file: /opt/flink/log/flink--standalonesession-0-9087538b99f0.log
+jobmanager     | 2024-12-15 18:22:06,273 INFO  org.apache.flink.runtime.webmonitor.WebMonitorUtils          [] - Determined location of main cluster component stdout file: /opt/flink/log/flink--standalonesession-0-9087538b99f0.out
+taskmanager-1  | 2024-12-15 18:22:06,301 INFO  org.apache.pekko.remote.RemoteActorRefProvider               [] - Pekko Cluster not in use - enabling unsafe features anyway because `pekko.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+taskmanager-1  | 2024-12-15 18:22:06,303 INFO  org.apache.pekko.remote.Remoting                             [] - Starting remoting
+jobmanager     | 2024-12-15 18:22:06,521 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Rest endpoint listening at 0.0.0.0:8081
+jobmanager     | 2024-12-15 18:22:06,526 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - http://0.0.0.0:8081 was granted leadership with leaderSessionID=00000000-0000-0000-0000-000000000000
+jobmanager     | 2024-12-15 18:22:06,528 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Web frontend listening at http://0.0.0.0:8081.
+jobmanager     | 2024-12-15 18:22:06,574 INFO  org.apache.flink.runtime.dispatcher.runner.DefaultDispatcherRunner [] - DefaultDispatcherRunner was granted leadership with leader id 00000000-0000-0000-0000-000000000000. Creating new DispatcherLeaderProcess.
+jobmanager     | 2024-12-15 18:22:06,584 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Start SessionDispatcherLeaderProcess.
+jobmanager     | 2024-12-15 18:22:06,588 INFO  org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl [] - Starting resource manager service.
+jobmanager     | 2024-12-15 18:22:06,592 INFO  org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl [] - Resource manager service is granted leadership with session id 00000000-0000-0000-0000-000000000000.
+jobmanager     | 2024-12-15 18:22:06,596 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Recover all persisted job graphs that are not finished, yet.
+jobmanager     | 2024-12-15 18:22:06,598 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Successfully recovered 0 persisted job graphs.
+jobmanager     | 2024-12-15 18:22:06,625 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.dispatcher.StandaloneDispatcher at pekko://flink/user/rpc/dispatcher_0 .
+taskmanager-1  | 2024-12-15 18:22:06,633 INFO  org.apache.pekko.remote.Remoting                             [] - Remoting started; listening on addresses :[pekko.tcp://flink@172.23.0.5:41785]
+jobmanager     | 2024-12-15 18:22:06,633 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.resourcemanager.StandaloneResourceManager at pekko://flink/user/rpc/resourcemanager_1 .
+jobmanager     | 2024-12-15 18:22:06,675 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Starting the resource manager.
+jobmanager     | 2024-12-15 18:22:06,688 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Starting the slot manager.
+jobmanager     | 2024-12-15 18:22:06,690 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Starting tokens update task
+jobmanager     | 2024-12-15 18:22:06,691 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - No tokens obtained so skipping notifications
+jobmanager     | 2024-12-15 18:22:06,691 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Tokens update task not started because either no tokens obtained or none of the tokens specified its renewal date
+taskmanager-1  | 2024-12-15 18:22:06,825 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Actor system started at pekko.tcp://flink@172.23.0.5:41785
+taskmanager-1  | 2024-12-15 18:22:06,851 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Using working directory: WorkingDirectory(/tmp/tm_172.23.0.5:41785-e79094)
+taskmanager-1  | 2024-12-15 18:22:06,865 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - No metrics reporter configured, no metrics will be exposed/reported.
+taskmanager-1  | 2024-12-15 18:22:06,865 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - No trace reporter configured, no metrics will be exposed/reported.
+taskmanager-1  | 2024-12-15 18:22:06,869 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Trying to start actor system, external address 172.23.0.5:0, bind address 0.0.0.0:0.
+taskmanager-1  | 2024-12-15 18:22:06,912 INFO  org.apache.pekko.event.slf4j.Slf4jLogger                     [] - Slf4jLogger started
+taskmanager-1  | 2024-12-15 18:22:06,921 INFO  org.apache.pekko.remote.RemoteActorRefProvider               [] - Pekko Cluster not in use - enabling unsafe features anyway because `pekko.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+taskmanager-1  | 2024-12-15 18:22:06,922 INFO  org.apache.pekko.remote.Remoting                             [] - Starting remoting
+taskmanager-1  | 2024-12-15 18:22:06,975 INFO  org.apache.pekko.remote.Remoting                             [] - Remoting started; listening on addresses :[pekko.tcp://flink-metrics@172.23.0.5:41201]
+taskmanager-1  | 2024-12-15 18:22:06,988 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Actor system started at pekko.tcp://flink-metrics@172.23.0.5:41201
+taskmanager-1  | 2024-12-15 18:22:07,006 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at pekko://flink-metrics/user/rpc/MetricQueryService_172.23.0.5:41785-e79094 .
+taskmanager-1  | 2024-12-15 18:22:07,033 INFO  org.apache.flink.runtime.blob.PermanentBlobCache             [] - Created BLOB cache storage directory /tmp/tm_172.23.0.5:41785-e79094/blobStorage
+taskmanager-1  | 2024-12-15 18:22:07,040 INFO  org.apache.flink.runtime.blob.TransientBlobCache             [] - Created BLOB cache storage directory /tmp/tm_172.23.0.5:41785-e79094/blobStorage
+taskmanager-1  | 2024-12-15 18:22:07,048 INFO  org.apache.flink.runtime.externalresource.ExternalResourceUtils [] - Enabled external resources: []
+taskmanager-1  | 2024-12-15 18:22:07,049 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Loading delegation token receivers
+kafka          | [2024-12-15 18:22:07,055] INFO Creating topic test-topic with configuration {} and initial partition assignment HashMap(0 -> ArrayBuffer(1)) (kafka.zk.AdminZkClient)
+taskmanager-1  | 2024-12-15 18:22:07,057 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hadoopfs loaded and initialized
+taskmanager-1  | 2024-12-15 18:22:07,058 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hbase loaded and initialized
+taskmanager-1  | 2024-12-15 18:22:07,059 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+taskmanager-1  | 2024-12-15 18:22:07,059 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+taskmanager-1  | 2024-12-15 18:22:07,059 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+taskmanager-1  | 2024-12-15 18:22:07,060 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+taskmanager-1  | 2024-12-15 18:22:07,060 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+taskmanager-1  | 2024-12-15 18:22:07,060 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+taskmanager-1  | 2024-12-15 18:22:07,061 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+taskmanager-1  | 2024-12-15 18:22:07,061 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+taskmanager-1  | 2024-12-15 18:22:07,062 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receivers loaded successfully
+taskmanager-1  | 2024-12-15 18:22:07,063 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Starting TaskManager with ResourceID: 172.23.0.5:41785-e79094
+kafka          | [2024-12-15 18:22:07,106] INFO [Controller id=1] New topics: [Set(test-topic)], deleted topics: [HashSet()], new partition replica assignment [Set(TopicIdReplicaAssignment(test-topic,Some(1Dih8g5aRua9VdRVbSA6nQ),Map(test-topic-0 -> ReplicaAssignment(replicas=1, addingReplicas=, removingReplicas=))))] (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:07,108] INFO [Controller id=1] New partition creation callback for test-topic-0 (kafka.controller.KafkaController)
+taskmanager-1  | 2024-12-15 18:22:07,111 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerServices    [] - Temporary file directory '/tmp': total 1006 GB, usable 843 GB (83.80% usable)
+kafka          | [2024-12-15 18:22:07,113] INFO [Controller id=1 epoch=1] Changed partition test-topic-0 state from NonExistentPartition to NewPartition with assigned replicas 1 (state.change.logger)
+kafka          | [2024-12-15 18:22:07,115] INFO [Controller id=1 epoch=1] Sending UpdateMetadata request to brokers HashSet() for 0 partitions (state.change.logger)
+taskmanager-1  | 2024-12-15 18:22:07,116 INFO  org.apache.flink.runtime.io.disk.iomanager.IOManager         [] - Created a new FileChannelManager for spilling of task related data to disk (joins, sorting, ...). Used directories:
+taskmanager-1  | 	/tmp/flink-io-a15c0785-210e-4099-aff9-8152f505158d
+kafka          | [2024-12-15 18:22:07,122] TRACE [Controller id=1 epoch=1] Changed state of replica 1 for partition test-topic-0 from NonExistentReplica to NewReplica (state.change.logger)
+kafka          | [2024-12-15 18:22:07,122] INFO [Controller id=1 epoch=1] Sending UpdateMetadata request to brokers HashSet() for 0 partitions (state.change.logger)
+taskmanager-1  | 2024-12-15 18:22:07,128 INFO  org.apache.flink.runtime.io.network.netty.NettyConfig        [] - NettyConfig [server address: /0.0.0.0, server port range: 0, ssl enabled: false, memory segment size (bytes): 32768, transport type: AUTO, number of server threads: 2 (manual), number of client threads: 2 (manual), server connect backlog: 0 (use Netty's default), client connect timeout (sec): 120, send/receive buffer size (bytes): 0 (use Netty's default)]
+kafka          | [2024-12-15 18:22:07,164] INFO [Controller id=1 epoch=1] Changed partition test-topic-0 from NewPartition to OnlinePartition with state LeaderAndIsr(leader=1, leaderEpoch=0, isrWithBrokerEpoch=List(BrokerState(brokerId=1, brokerEpoch=-1)), leaderRecoveryState=RECOVERED, partitionEpoch=0) (state.change.logger)
+kafka          | [2024-12-15 18:22:07,168] TRACE [Controller id=1 epoch=1] Sending become-leader LeaderAndIsr request LeaderAndIsrPartitionState(topicName='test-topic', partitionIndex=0, controllerEpoch=1, leader=1, leaderEpoch=0, isr=[1], partitionEpoch=0, replicas=[1], addingReplicas=[], removingReplicas=[], isNew=true, leaderRecoveryState=0) to broker 1 for partition test-topic-0 (state.change.logger)
+kafka          | [2024-12-15 18:22:07,170] INFO [Controller id=1 epoch=1] Sending LeaderAndIsr request to broker 1 with 1 become-leader and 0 become-follower partitions (state.change.logger)
+kafka          | [2024-12-15 18:22:07,173] INFO [Controller id=1 epoch=1] Sending UpdateMetadata request to brokers HashSet(1) for 1 partitions (state.change.logger)
+kafka          | [2024-12-15 18:22:07,175] TRACE [Controller id=1 epoch=1] Changed state of replica 1 for partition test-topic-0 from NewReplica to OnlineReplica (state.change.logger)
+kafka          | [2024-12-15 18:22:07,175] INFO [Controller id=1 epoch=1] Sending UpdateMetadata request to brokers HashSet() for 0 partitions (state.change.logger)
+kafka          | [2024-12-15 18:22:07,180] INFO [Broker id=1] Handling LeaderAndIsr request correlationId 1 from controller 1 for 1 partitions (state.change.logger)
+kafka          | [2024-12-15 18:22:07,181] TRACE [Broker id=1] Received LeaderAndIsr request LeaderAndIsrPartitionState(topicName='test-topic', partitionIndex=0, controllerEpoch=1, leader=1, leaderEpoch=0, isr=[1], partitionEpoch=0, replicas=[1], addingReplicas=[], removingReplicas=[], isNew=true, leaderRecoveryState=0) correlation id 1 from controller 1 epoch 1 (state.change.logger)
+taskmanager-1  | 2024-12-15 18:22:07,196 INFO  org.apache.flink.runtime.io.network.NettyShuffleServiceFactory [] - Created a new FileChannelManager for storing result partitions of BLOCKING shuffles. Used directories:
+taskmanager-1  | 	/tmp/flink-netty-shuffle-dc75a84c-0c9b-4cd8-bb17-c74236ddcd20
+kafka          | [2024-12-15 18:22:07,213] TRACE [Broker id=1] Handling LeaderAndIsr request correlationId 1 from controller 1 epoch 1 starting the become-leader transition for partition test-topic-0 (state.change.logger)
+kafka          | [2024-12-15 18:22:07,216] INFO [ReplicaFetcherManager on broker 1] Removed fetcher for partitions Set(test-topic-0) (kafka.server.ReplicaFetcherManager)
+kafka          | [2024-12-15 18:22:07,217] INFO [Broker id=1] Stopped fetchers as part of LeaderAndIsr request correlationId 1 from controller 1 epoch 1 as part of the become-leader transition for 1 partitions (state.change.logger)
+taskmanager-1  | 2024-12-15 18:22:07,335 INFO  org.apache.flink.runtime.io.network.buffer.NetworkBufferPool [] - Allocated 128 MB for network buffer pool (number of memory segments: 4096, bytes per segment: 32768).
+kafka          | [2024-12-15 18:22:07,351] INFO [LogLoader partition=test-topic-0, dir=/var/lib/kafka/data] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+taskmanager-1  | 2024-12-15 18:22:07,366 INFO  org.apache.flink.runtime.io.network.NettyShuffleEnvironment  [] - Starting the network environment and its components.
+kafka          | [2024-12-15 18:22:07,380] INFO Created log for partition test-topic-0 in /var/lib/kafka/data/test-topic-0 with properties {} (kafka.log.LogManager)
+kafka          | [2024-12-15 18:22:07,385] INFO [Partition test-topic-0 broker=1] No checkpointed highwatermark is found for partition test-topic-0 (kafka.cluster.Partition)
+kafka          | [2024-12-15 18:22:07,391] INFO [Partition test-topic-0 broker=1] Log loaded for partition test-topic-0 with initial high watermark 0 (kafka.cluster.Partition)
+kafka          | [2024-12-15 18:22:07,396] INFO [Broker id=1] Leader test-topic-0 with topic id Some(1Dih8g5aRua9VdRVbSA6nQ) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [1], adding replicas [] and removing replicas [] . Previous leader epoch was -1. (state.change.logger)
+kafka          | [2024-12-15 18:22:07,421] TRACE [Broker id=1] Completed LeaderAndIsr request correlationId 1 from controller 1 epoch 1 for the become-leader transition for partition test-topic-0 (state.change.logger)
+kafka          | [2024-12-15 18:22:07,435] INFO [Broker id=1] Finished LeaderAndIsr request in 256ms correlationId 1 from controller 1 for 1 partitions (state.change.logger)
+kafka          | [2024-12-15 18:22:07,442] TRACE [Controller id=1 epoch=1] Received response LeaderAndIsrResponseData(errorCode=0, partitionErrors=[], topics=[LeaderAndIsrTopicError(topicId=1Dih8g5aRua9VdRVbSA6nQ, partitionErrors=[LeaderAndIsrPartitionError(topicName='', partitionIndex=0, errorCode=0)])]) for request LEADER_AND_ISR with correlation id 1 sent to broker kafka:9092 (id: 1 rack: null) (state.change.logger)
+kafka          | [2024-12-15 18:22:07,458] TRACE [Broker id=1] Cached leader info UpdateMetadataPartitionState(topicName='test-topic', partitionIndex=0, controllerEpoch=1, leader=1, leaderEpoch=0, isr=[1], zkVersion=0, replicas=[1], offlineReplicas=[]) for partition test-topic-0 in response to UpdateMetadata request sent by controller 1 epoch 1 with correlation id 2 (state.change.logger)
+kafka          | [2024-12-15 18:22:07,460] INFO [Broker id=1] Add 1 partitions and deleted 0 partitions from metadata cache in response to UpdateMetadata request sent by controller 1 epoch 1 with correlation id 2 (state.change.logger)
+kafka          | [2024-12-15 18:22:07,474] TRACE [Controller id=1 epoch=1] Received response UpdateMetadataResponseData(errorCode=0) for request UPDATE_METADATA with correlation id 2 sent to broker kafka:9092 (id: 1 rack: null) (state.change.logger)
+kafka          | Created topic test-topic.
+taskmanager-1  | 2024-12-15 18:22:07,484 INFO  org.apache.flink.runtime.io.network.netty.NettyClient        [] - Transport type 'auto': using EPOLL.
+taskmanager-1  | 2024-12-15 18:22:07,486 INFO  org.apache.flink.runtime.io.network.netty.NettyClient        [] - Successful initialization (took 119 ms).
+taskmanager-1  | 2024-12-15 18:22:07,498 INFO  org.apache.flink.runtime.io.network.netty.NettyServer        [] - Transport type 'auto': using EPOLL.
+taskmanager-1  | 2024-12-15 18:22:07,551 INFO  org.apache.flink.runtime.io.network.netty.NettyServer        [] - Successful initialization (took 61 ms). Listening on SocketAddress /0:0:0:0:0:0:0:0%0:38985.
+taskmanager-1  | 2024-12-15 18:22:07,551 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerServices    [] - TaskManager data connection initialized successfully; listening internally on port: 38985
+taskmanager-1  | 2024-12-15 18:22:07,553 INFO  org.apache.flink.runtime.taskexecutor.KvStateService         [] - Starting the kvState service and its components.
+taskmanager-1  | 2024-12-15 18:22:07,600 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.taskexecutor.TaskExecutor at pekko://flink/user/rpc/taskmanager_0 .
+taskmanager-1  | 2024-12-15 18:22:07,621 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Start job leader service.
+taskmanager-1  | 2024-12-15 18:22:07,626 INFO  org.apache.flink.runtime.filecache.FileCache                 [] - User file cache uses directory /tmp/flink-dist-cache-34c2631e-e87c-4cf6-9138-e0032a9430b6
+taskmanager-1  | 2024-12-15 18:22:07,629 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Connecting to ResourceManager pekko.tcp://flink@jobmanager:6123/user/rpc/resourcemanager_*(00000000000000000000000000000000).
+kafka          | Restarting the JSON stream...
+taskmanager-1  | 2024-12-15 18:22:07,921 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Resolved ResourceManager address, beginning registration
+jobmanager     | 2024-12-15 18:22:08,036 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering TaskManager with ResourceID 172.23.0.5:41785-e79094 (pekko.tcp://flink@172.23.0.5:41785/user/rpc/taskmanager_0) at ResourceManager
+jobmanager     | 2024-12-15 18:22:08,074 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Unregistering task executor 193d8772366cd9be53c42b3941db8469 from the slot manager.
+jobmanager     | 2024-12-15 18:22:08,074 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering TaskManager with ResourceID 172.23.0.5:41785-e79094 (pekko.tcp://flink@172.23.0.5:41785/user/rpc/taskmanager_0) at ResourceManager
+taskmanager-1  | 2024-12-15 18:22:08,086 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Successful registration at resource manager pekko.tcp://flink@jobmanager:6123/user/rpc/resourcemanager_* under registration id d43399e5fac3cdc9ba9d699a2352d92b.
+jobmanager     | 2024-12-15 18:22:08,102 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Registering task executor 172.23.0.5:41785-e79094 under d43399e5fac3cdc9ba9d699a2352d92b at the slot manager.
+kafka          | [2024-12-15 18:22:11,039] INFO [Controller id=1] Processing automatic preferred replica leader election (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:11,040] TRACE [Controller id=1] Checking need to trigger auto leader balancing (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:11,047] DEBUG [Controller id=1] Topics not in preferred replica for broker 1 Map() (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:11,050] TRACE [Controller id=1] Leader imbalance ratio for broker 1 is 0.0 (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:11,816] DEBUG [Controller id=1] There is no producerId block yet (Zk path version 0), creating the first block (kafka.controller.KafkaController)
+kafka          | [2024-12-15 18:22:11,830] INFO [Controller id=1] Acquired new producerId block ProducerIdsBlock(assignedBrokerId=1, firstProducerId=0, size=1000) by writing to Zk with path version 1 (kafka.controller.KafkaController)

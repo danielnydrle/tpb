@@ -4,7 +4,7 @@
 sleep 10
 
 # Create the Kafka topic
-kafka-topics --create --topic test-topic --bootstrap-server host.docker.internal:9092 --partitions 1 --replication-factor 1 || true
+kafka-topics --create --topic test-topic --bootstrap-server kafka:9092 --partitions 1 --replication-factor 1 || true
 
 # Stream JSON objects in an infinite loop
 if [ -f /files/idnes.json ]; then
@@ -13,7 +13,7 @@ if [ -f /files/idnes.json ]; then
         
         # Use `jq` to extract JSON objects and stream them
         jq -c '.[]' /files/idnes.json | while IFS= read -r json_line; do
-            echo "$json_line" | kafka-console-producer --broker-list host.docker.internal:9092 --topic test-topic
+            echo "$json_line" | kafka-console-producer --broker-list kafka:9092 --topic test-topic
             echo "Produced: $json_line"
             # Generate a random sleep interval between 1 and 15 seconds
             sleep_interval=$((RANDOM % 10 + 1))
