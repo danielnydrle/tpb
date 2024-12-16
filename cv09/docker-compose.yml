@@ -7,6 +7,8 @@ services:
       ZOOKEEPER_CLIENT_PORT: 2181
     ports:
       - "2181:2181"
+    volumes:
+      - ".:/files:rw"
 
   kafka:
     build: ./kafka
@@ -16,7 +18,7 @@ services:
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://host.docker.internal:9092
       KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_DELETE_TOPIC_ENABLE: "true"
@@ -24,7 +26,8 @@ services:
       - "9092:9092"
     volumes:
       - ".:/files:rw"
-    command: ["bash", "-c", "/etc/confluent/docker/run & /files/kafka/start-stream.sh"]
+    user: "root"
+    command: ["bash", "-c", "/etc/confluent/docker/run & echo '172.17.0.1 host.docker.internal' >> /etc/hosts & /files/kafka/start-stream.sh"]
 
   jobmanager:
     build: ./flink
