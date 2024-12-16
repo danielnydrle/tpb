@@ -1,0 +1,52 @@
+# 1: 10 libovolnych uzlu
+MATCH (n) RETURN n LIMIT 10;
+
+# 2: 10 libovolnych filmu
+MATCH (n:Movie) RETURN n LIMIT 10;
+
+# 3: herci, kteri hrali ve filmu TheMatrix, serazeni podle jmena
+MATCH (n:Person)-[:ACTED_IN]->(:Movie {title: 'The Matrix'}) RETURN n.name ORDER BY n.name;
+
+# 4: filmy, ve kterych hral Keanu Reeves
+MATCH (n:Movie)<-[:ACTED_IN]-(p:Person {name: 'Keanu Reeves'}) RETURN n.title;
+
+# 5: pocet filmu, ve kterych hral Keanu Reeves
+MATCH (n:Movie)<-[:ACTED_IN]-(p:Person {name: 'Keanu Reeves'}) RETURN COUNT(n);
+
+# 6: filmy, ve kterych hrali Keanu Reeves a Carrie-Anne Moss
+MATCH (n:Movie)<-[:ACTED_IN]-(p:Person {name: 'Keanu Reeves'}), (n)<-[:ACTED_IN]-(p2:Person {name: 'Carrie-Anne Moss'}) RETURN n.title;
+
+# 7: pridani noveho filmu "John Wick", ve kterem hraje Keanu Reeves
+CREATE (m:Movie {title: 'John Wick'})<-[:ACTED_IN]-(p:Person {name: 'Keanu Reeves'});
+
+# zobraz film John Wick
+MATCH (n:Movie {title: 'John Wick'}) RETURN n;
+
+# 8: uprava herce Keanu Reeves, pridani libovolne vlastnosti
+MATCH (p:Person {name: 'Keanu Reeves'}) SET p.birth_year = '1964';
+
+# bonus 1: prumerny vydelek hercu
+MATCH (p:Person)-[r:ACTED_IN]->(m:Movie) RETURN AVG(r.earnings);
+
+# bonus 2: vsechny kontakty Toma Hankse, ktere se narodily v roce 1960 nebo pozdeji a vydelaly aspon $10m za film
+	# - vraceni jmena kontaktu, data narozeni a vydelku
+	# - serazeni od nejlepe hodnoceneho
+MATCH (p:Person {name: 'Tom Hanks'})-[:CONTACT]->(c:Person)
+WHERE c.birth_year >= 1960
+MATCH (c)-[r:ACTED_IN]->(m:Movie)
+WHERE r.earnings >= 10000000
+RETURN c.name, c.birth_year, r.earnings ORDER BY r.earnings DESC;
+
+# bonus 3: pridani labelu Rich hercum, kteri vydelali aspon $50m
+MATCH (p:Person)-[r:ACTED_IN]->(m:Movie)
+WITH p, SUM(r.earnings) AS total_earnings
+WHERE total_earnings > 50000000
+SET p:Rich;
+
+# bonus 4: dotaz, ktery probehne pokazde, kdyz Keanu Reeves zhledne Top Gun
+	# - zajisteni vytvoreni vztahu VIEWED mezi Keanu Reeves a Top Gun
+	# - pocitani poctu zhlednuti (inkrementuje o 1)
+MATCH (p:Person {name: 'Keanu Reeves'}), (m:Movie {title: 'Top Gun'})
+MERGE (p)-[r:VIEWED]->(m)
+ON CREATE SET r.views = 1
+ON MATCH SET r.views = r.views + 1;
